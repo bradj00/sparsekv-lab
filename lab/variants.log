@@ -1,0 +1,463 @@
+PROGRESS 2 loading Qwen/Qwen3.5-2B
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 12761.37it/s]
+PROGRESS 3 essay 1/5 needle full@all: 1.00
+PROGRESS 3 essay 1/5 needle lr32@0.02: 1.00
+PROGRESS 3 essay 1/5 needle lr32x@0.02: 1.00
+PROGRESS 3 essay 1/5 needle lr64x@0.02: 1.00
+PROGRESS 4 essay 1/5 needle lr32h@0.02: 1.00
+PROGRESS 4 essay 1/5 needle shared@0.02: 1.00
+PROGRESS 4 essay 1/5 needle xl2@0.02: 1.00
+PROGRESS 4 essay 1/5 needle xl3@0.02: 0.33
+PROGRESS 4 essay 1/5 needle lr32x@0.01: 1.00
+PROGRESS 5 essay 1/5 needle xl2@0.01: 1.00
+PROGRESS 5 essay 1/5 essay-complete full@all: 1.00
+PROGRESS 5 essay 1/5 essay-complete lr32@0.02: 0.06
+PROGRESS 5 essay 1/5 essay-complete lr32x@0.02: 0.06
+PROGRESS 5 essay 1/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 6 essay 1/5 essay-complete lr32h@0.02: 0.06
+PROGRESS 6 essay 1/5 essay-complete shared@0.02: 0.06
+PROGRESS 6 essay 1/5 essay-complete xl2@0.02: 0.06
+PROGRESS 6 essay 1/5 essay-complete xl3@0.02: 0.06
+PROGRESS 6 essay 1/5 essay-complete lr32x@0.01: 0.06
+PROGRESS 7 essay 1/5 essay-complete xl2@0.01: 0.06
+PROGRESS 7 essay 1/5 essay-complete full@all: 1.00
+PROGRESS 7 essay 1/5 essay-complete lr32@0.02: 1.00
+PROGRESS 7 essay 1/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 7 essay 1/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 8 essay 1/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 8 essay 1/5 essay-complete shared@0.02: 1.00
+PROGRESS 8 essay 1/5 essay-complete xl2@0.02: 1.00
+PROGRESS 8 essay 1/5 essay-complete xl3@0.02: 1.00
+PROGRESS 8 essay 1/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 9 essay 1/5 essay-complete xl2@0.01: 1.00
+PROGRESS 9 essay 1/5 essay-complete full@all: 0.08
+PROGRESS 9 essay 1/5 essay-complete lr32@0.02: 0.08
+PROGRESS 9 essay 1/5 essay-complete lr32x@0.02: 0.17
+PROGRESS 9 essay 1/5 essay-complete lr64x@0.02: 0.17
+PROGRESS 10 essay 1/5 essay-complete lr32h@0.02: 0.17
+PROGRESS 10 essay 1/5 essay-complete shared@0.02: 0.17
+PROGRESS 10 essay 1/5 essay-complete xl2@0.02: 0.08
+PROGRESS 10 essay 1/5 essay-complete xl3@0.02: 0.08
+PROGRESS 10 essay 1/5 essay-complete lr32x@0.01: 0.17
+PROGRESS 11 essay 1/5 essay-complete xl2@0.01: 0.83
+PROGRESS 11 essay 1/5 essay-complete full@all: 0.20
+PROGRESS 11 essay 1/5 essay-complete lr32@0.02: 0.10
+PROGRESS 11 essay 1/5 essay-complete lr32x@0.02: 0.10
+PROGRESS 11 essay 1/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 12 essay 1/5 essay-complete lr32h@0.02: 0.10
+PROGRESS 12 essay 1/5 essay-complete shared@0.02: 0.10
+PROGRESS 12 essay 1/5 essay-complete xl2@0.02: 0.10
+PROGRESS 12 essay 1/5 essay-complete xl3@0.02: 0.10
+PROGRESS 13 essay 1/5 essay-complete lr32x@0.01: 0.10
+PROGRESS 13 essay 1/5 essay-complete xl2@0.01: 0.10
+PROGRESS 13 essay 1/5 essay-complete full@all: 1.00
+PROGRESS 13 essay 1/5 essay-complete lr32@0.02: 1.00
+PROGRESS 13 essay 1/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 14 essay 1/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 14 essay 1/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 14 essay 1/5 essay-complete shared@0.02: 1.00
+PROGRESS 14 essay 1/5 essay-complete xl2@0.02: 0.36
+PROGRESS 14 essay 1/5 essay-complete xl3@0.02: 0.36
+PROGRESS 15 essay 1/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 15 essay 1/5 essay-complete xl2@0.01: 0.36
+PROGRESS 15 essay 2/5 needle full@all: 1.00
+PROGRESS 15 essay 2/5 needle lr32@0.02: 1.00
+PROGRESS 15 essay 2/5 needle lr32x@0.02: 1.00
+PROGRESS 16 essay 2/5 needle lr64x@0.02: 1.00
+PROGRESS 16 essay 2/5 needle lr32h@0.02: 1.00
+PROGRESS 16 essay 2/5 needle shared@0.02: 1.00
+PROGRESS 16 essay 2/5 needle xl2@0.02: 1.00
+PROGRESS 16 essay 2/5 needle xl3@0.02: 0.50
+PROGRESS 17 essay 2/5 needle lr32x@0.01: 1.00
+PROGRESS 17 essay 2/5 needle xl2@0.01: 1.00
+PROGRESS 17 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 17 essay 2/5 essay-complete lr32@0.02: 1.00
+PROGRESS 17 essay 2/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 18 essay 2/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 18 essay 2/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 18 essay 2/5 essay-complete shared@0.02: 1.00
+PROGRESS 18 essay 2/5 essay-complete xl2@0.02: 0.44
+PROGRESS 18 essay 2/5 essay-complete xl3@0.02: 0.94
+PROGRESS 19 essay 2/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 19 essay 2/5 essay-complete xl2@0.01: 0.44
+PROGRESS 19 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 19 essay 2/5 essay-complete lr32@0.02: 0.00
+PROGRESS 19 essay 2/5 essay-complete lr32x@0.02: 0.00
+PROGRESS 20 essay 2/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 20 essay 2/5 essay-complete lr32h@0.02: 0.00
+PROGRESS 20 essay 2/5 essay-complete shared@0.02: 1.00
+PROGRESS 20 essay 2/5 essay-complete xl2@0.02: 0.00
+PROGRESS 20 essay 2/5 essay-complete xl3@0.02: 0.00
+PROGRESS 21 essay 2/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 21 essay 2/5 essay-complete xl2@0.01: 0.00
+PROGRESS 21 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 21 essay 2/5 essay-complete lr32@0.02: 1.00
+PROGRESS 22 essay 2/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 22 essay 2/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 22 essay 2/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 22 essay 2/5 essay-complete shared@0.02: 1.00
+PROGRESS 22 essay 2/5 essay-complete xl2@0.02: 0.18
+PROGRESS 23 essay 2/5 essay-complete xl3@0.02: 0.18
+PROGRESS 23 essay 2/5 essay-complete lr32x@0.01: 0.18
+PROGRESS 23 essay 2/5 essay-complete xl2@0.01: 0.18
+PROGRESS 23 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 23 essay 2/5 essay-complete lr32@0.02: 1.00
+PROGRESS 24 essay 2/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 24 essay 2/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 24 essay 2/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 24 essay 2/5 essay-complete shared@0.02: 1.00
+PROGRESS 24 essay 2/5 essay-complete xl2@0.02: 0.18
+PROGRESS 25 essay 2/5 essay-complete xl3@0.02: 0.18
+PROGRESS 25 essay 2/5 essay-complete lr32x@0.01: 0.27
+PROGRESS 25 essay 2/5 essay-complete xl2@0.01: 0.27
+PROGRESS 25 essay 2/5 essay-complete full@all: 0.00
+PROGRESS 25 essay 2/5 essay-complete lr32@0.02: 0.00
+PROGRESS 26 essay 2/5 essay-complete lr32x@0.02: 0.00
+PROGRESS 26 essay 2/5 essay-complete lr64x@0.02: 0.00
+PROGRESS 26 essay 2/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 26 essay 2/5 essay-complete shared@0.02: 0.74
+PROGRESS 26 essay 2/5 essay-complete xl2@0.02: 0.22
+PROGRESS 27 essay 2/5 essay-complete xl3@0.02: 0.00
+PROGRESS 27 essay 2/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 27 essay 2/5 essay-complete xl2@0.01: 0.00
+PROGRESS 27 essay 3/5 needle full@all: 1.00
+PROGRESS 27 essay 3/5 needle lr32@0.02: 1.00
+PROGRESS 28 essay 3/5 needle lr32x@0.02: 1.00
+PROGRESS 28 essay 3/5 needle lr64x@0.02: 1.00
+PROGRESS 28 essay 3/5 needle lr32h@0.02: 1.00
+PROGRESS 28 essay 3/5 needle shared@0.02: 1.00
+PROGRESS 28 essay 3/5 needle xl2@0.02: 1.00
+PROGRESS 29 essay 3/5 needle xl3@0.02: 1.00
+PROGRESS 29 essay 3/5 needle lr32x@0.01: 1.00
+PROGRESS 29 essay 3/5 needle xl2@0.01: 0.15
+PROGRESS 29 essay 3/5 essay-complete full@all: 0.36
+PROGRESS 29 essay 3/5 essay-complete lr32@0.02: 0.45
+PROGRESS 30 essay 3/5 essay-complete lr32x@0.02: 0.45
+PROGRESS 30 essay 3/5 essay-complete lr64x@0.02: 0.45
+PROGRESS 30 essay 3/5 essay-complete lr32h@0.02: 0.45
+PROGRESS 30 essay 3/5 essay-complete shared@0.02: 1.00
+PROGRESS 30 essay 3/5 essay-complete xl2@0.02: 0.36
+PROGRESS 31 essay 3/5 essay-complete xl3@0.02: 0.27
+PROGRESS 31 essay 3/5 essay-complete lr32x@0.01: 0.45
+PROGRESS 31 essay 3/5 essay-complete xl2@0.01: 0.27
+PROGRESS 31 essay 3/5 essay-complete full@all: 1.00
+PROGRESS 32 essay 3/5 essay-complete lr32@0.02: 0.12
+PROGRESS 32 essay 3/5 essay-complete lr32x@0.02: 0.25
+PROGRESS 32 essay 3/5 essay-complete lr64x@0.02: 0.12
+PROGRESS 32 essay 3/5 essay-complete lr32h@0.02: 0.12
+PROGRESS 32 essay 3/5 essay-complete shared@0.02: 1.00
+PROGRESS 33 essay 3/5 essay-complete xl2@0.02: 0.12
+PROGRESS 33 essay 3/5 essay-complete xl3@0.02: 0.25
+PROGRESS 33 essay 3/5 essay-complete lr32x@0.01: 0.50
+PROGRESS 33 essay 3/5 essay-complete xl2@0.01: 0.12
+PROGRESS 33 essay 3/5 essay-complete full@all: 1.00
+PROGRESS 34 essay 3/5 essay-complete lr32@0.02: 1.00
+PROGRESS 34 essay 3/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 34 essay 3/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 34 essay 3/5 essay-complete lr32h@0.02: 0.00
+PROGRESS 34 essay 3/5 essay-complete shared@0.02: 0.00
+PROGRESS 35 essay 3/5 essay-complete xl2@0.02: 0.00
+PROGRESS 35 essay 3/5 essay-complete xl3@0.02: 0.00
+PROGRESS 35 essay 3/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 35 essay 3/5 essay-complete xl2@0.01: 0.00
+PROGRESS 35 essay 3/5 essay-complete full@all: 0.20
+PROGRESS 36 essay 3/5 essay-complete lr32@0.02: 0.20
+PROGRESS 36 essay 3/5 essay-complete lr32x@0.02: 0.20
+PROGRESS 36 essay 3/5 essay-complete lr64x@0.02: 0.30
+PROGRESS 36 essay 3/5 essay-complete lr32h@0.02: 0.20
+PROGRESS 36 essay 3/5 essay-complete shared@0.02: 0.20
+PROGRESS 37 essay 3/5 essay-complete xl2@0.02: 0.40
+PROGRESS 37 essay 3/5 essay-complete xl3@0.02: 0.20
+PROGRESS 37 essay 3/5 essay-complete lr32x@0.01: 0.10
+PROGRESS 37 essay 3/5 essay-complete xl2@0.01: 0.10
+PROGRESS 37 essay 3/5 essay-complete full@all: 0.53
+PROGRESS 38 essay 3/5 essay-complete lr32@0.02: 0.53
+PROGRESS 38 essay 3/5 essay-complete lr32x@0.02: 0.53
+PROGRESS 38 essay 3/5 essay-complete lr64x@0.02: 0.53
+PROGRESS 38 essay 3/5 essay-complete lr32h@0.02: 0.53
+PROGRESS 38 essay 3/5 essay-complete shared@0.02: 0.53
+PROGRESS 39 essay 3/5 essay-complete xl2@0.02: 0.53
+PROGRESS 39 essay 3/5 essay-complete xl3@0.02: 0.47
+PROGRESS 39 essay 3/5 essay-complete lr32x@0.01: 0.53
+PROGRESS 39 essay 3/5 essay-complete xl2@0.01: 0.53
+PROGRESS 39 essay 4/5 needle full@all: 1.00
+PROGRESS 40 essay 4/5 needle lr32@0.02: 1.00
+PROGRESS 40 essay 4/5 needle lr32x@0.02: 1.00
+PROGRESS 40 essay 4/5 needle lr64x@0.02: 1.00
+PROGRESS 40 essay 4/5 needle lr32h@0.02: 1.00
+PROGRESS 41 essay 4/5 needle shared@0.02: 1.00
+PROGRESS 41 essay 4/5 needle xl2@0.02: 1.00
+PROGRESS 41 essay 4/5 needle xl3@0.02: 1.00
+PROGRESS 41 essay 4/5 needle lr32x@0.01: 1.00
+PROGRESS 41 essay 4/5 needle xl2@0.01: 1.00
+PROGRESS 42 essay 4/5 essay-complete full@all: 0.00
+PROGRESS 42 essay 4/5 essay-complete lr32@0.02: 0.00
+PROGRESS 42 essay 4/5 essay-complete lr32x@0.02: 0.00
+PROGRESS 42 essay 4/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 42 essay 4/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 43 essay 4/5 essay-complete shared@0.02: 1.00
+PROGRESS 43 essay 4/5 essay-complete xl2@0.02: 0.00
+PROGRESS 43 essay 4/5 essay-complete xl3@0.02: 0.00
+PROGRESS 43 essay 4/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 43 essay 4/5 essay-complete xl2@0.01: 0.00
+PROGRESS 44 essay 4/5 essay-complete full@all: 1.00
+PROGRESS 44 essay 4/5 essay-complete lr32@0.02: 1.00
+PROGRESS 44 essay 4/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 44 essay 4/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 44 essay 4/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 45 essay 4/5 essay-complete shared@0.02: 1.00
+PROGRESS 45 essay 4/5 essay-complete xl2@0.02: 1.00
+PROGRESS 45 essay 4/5 essay-complete xl3@0.02: 0.00
+PROGRESS 45 essay 4/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 45 essay 4/5 essay-complete xl2@0.01: 1.00
+PROGRESS 46 essay 4/5 essay-complete full@all: 1.00
+PROGRESS 46 essay 4/5 essay-complete lr32@0.02: 1.00
+PROGRESS 46 essay 4/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 46 essay 4/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 46 essay 4/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 47 essay 4/5 essay-complete shared@0.02: 1.00
+PROGRESS 47 essay 4/5 essay-complete xl2@0.02: 0.18
+PROGRESS 47 essay 4/5 essay-complete xl3@0.02: 0.91
+PROGRESS 47 essay 4/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 47 essay 4/5 essay-complete xl2@0.01: 0.18
+PROGRESS 48 essay 4/5 essay-complete full@all: 1.00
+PROGRESS 48 essay 4/5 essay-complete lr32@0.02: 0.08
+PROGRESS 48 essay 4/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 48 essay 4/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 48 essay 4/5 essay-complete lr32h@0.02: 0.08
+PROGRESS 49 essay 4/5 essay-complete shared@0.02: 0.08
+PROGRESS 49 essay 4/5 essay-complete xl2@0.02: 0.08
+PROGRESS 49 essay 4/5 essay-complete xl3@0.02: 0.08
+PROGRESS 49 essay 4/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 50 essay 4/5 essay-complete xl2@0.01: 0.08
+PROGRESS 50 essay 4/5 essay-complete full@all: 0.00
+PROGRESS 50 essay 4/5 essay-complete lr32@0.02: 0.00
+PROGRESS 50 essay 4/5 essay-complete lr32x@0.02: 0.00
+PROGRESS 50 essay 4/5 essay-complete lr64x@0.02: 0.00
+PROGRESS 51 essay 4/5 essay-complete lr32h@0.02: 0.00
+PROGRESS 51 essay 4/5 essay-complete shared@0.02: 0.00
+PROGRESS 51 essay 4/5 essay-complete xl2@0.02: 0.00
+PROGRESS 51 essay 4/5 essay-complete xl3@0.02: 0.00
+PROGRESS 51 essay 4/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 52 essay 4/5 essay-complete xl2@0.01: 0.12
+PROGRESS 52 essay 5/5 needle full@all: 1.00
+PROGRESS 52 essay 5/5 needle lr32@0.02: 1.00
+PROGRESS 52 essay 5/5 needle lr32x@0.02: 1.00
+PROGRESS 52 essay 5/5 needle lr64x@0.02: 1.00
+PROGRESS 53 essay 5/5 needle lr32h@0.02: 1.00
+PROGRESS 53 essay 5/5 needle shared@0.02: 1.00
+PROGRESS 53 essay 5/5 needle xl2@0.02: 1.00
+PROGRESS 53 essay 5/5 needle xl3@0.02: 1.00
+PROGRESS 53 essay 5/5 needle lr32x@0.01: 1.00
+PROGRESS 54 essay 5/5 needle xl2@0.01: 1.00
+PROGRESS 54 essay 5/5 essay-complete full@all: 1.00
+PROGRESS 54 essay 5/5 essay-complete lr32@0.02: 1.00
+PROGRESS 54 essay 5/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 54 essay 5/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 55 essay 5/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 55 essay 5/5 essay-complete shared@0.02: 1.00
+PROGRESS 55 essay 5/5 essay-complete xl2@0.02: 1.00
+PROGRESS 55 essay 5/5 essay-complete xl3@0.02: 1.00
+PROGRESS 55 essay 5/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 56 essay 5/5 essay-complete xl2@0.01: 1.00
+PROGRESS 56 essay 5/5 essay-complete full@all: 0.13
+PROGRESS 56 essay 5/5 essay-complete lr32@0.02: 0.13
+PROGRESS 56 essay 5/5 essay-complete lr32x@0.02: 0.13
+PROGRESS 56 essay 5/5 essay-complete lr64x@0.02: 0.13
+PROGRESS 57 essay 5/5 essay-complete lr32h@0.02: 0.13
+PROGRESS 57 essay 5/5 essay-complete shared@0.02: 0.13
+PROGRESS 57 essay 5/5 essay-complete xl2@0.02: 0.13
+PROGRESS 57 essay 5/5 essay-complete xl3@0.02: 0.07
+PROGRESS 57 essay 5/5 essay-complete lr32x@0.01: 0.13
+PROGRESS 58 essay 5/5 essay-complete xl2@0.01: 0.13
+PROGRESS 58 essay 5/5 essay-complete full@all: 0.27
+PROGRESS 58 essay 5/5 essay-complete lr32@0.02: 0.33
+PROGRESS 58 essay 5/5 essay-complete lr32x@0.02: 0.27
+PROGRESS 58 essay 5/5 essay-complete lr64x@0.02: 0.27
+PROGRESS 59 essay 5/5 essay-complete lr32h@0.02: 0.27
+PROGRESS 59 essay 5/5 essay-complete shared@0.02: 0.27
+PROGRESS 59 essay 5/5 essay-complete xl2@0.02: 0.27
+PROGRESS 59 essay 5/5 essay-complete xl3@0.02: 0.27
+PROGRESS 60 essay 5/5 essay-complete lr32x@0.01: 0.27
+PROGRESS 60 essay 5/5 essay-complete xl2@0.01: 0.27
+PROGRESS 60 essay 5/5 essay-complete full@all: 1.00
+PROGRESS 60 essay 5/5 essay-complete lr32@0.02: 1.00
+PROGRESS 60 essay 5/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 61 essay 5/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 61 essay 5/5 essay-complete lr32h@0.02: 1.00
+PROGRESS 61 essay 5/5 essay-complete shared@0.02: 1.00
+PROGRESS 61 essay 5/5 essay-complete xl2@0.02: 1.00
+PROGRESS 61 essay 5/5 essay-complete xl3@0.02: 0.73
+PROGRESS 62 essay 5/5 essay-complete lr32x@0.01: 1.00
+PROGRESS 62 essay 5/5 essay-complete xl2@0.01: 0.73
+PROGRESS 62 essay 5/5 essay-complete full@all: 1.00
+PROGRESS 62 essay 5/5 essay-complete lr32@0.02: 0.00
+PROGRESS 62 essay 5/5 essay-complete lr32x@0.02: 1.00
+PROGRESS 63 essay 5/5 essay-complete lr64x@0.02: 1.00
+PROGRESS 63 essay 5/5 essay-complete lr32h@0.02: 0.00
+PROGRESS 63 essay 5/5 essay-complete shared@0.02: 0.00
+PROGRESS 63 essay 5/5 essay-complete xl2@0.02: 0.00
+PROGRESS 63 essay 5/5 essay-complete xl3@0.02: 0.00
+PROGRESS 64 essay 5/5 essay-complete lr32x@0.01: 0.00
+PROGRESS 64 essay 5/5 essay-complete xl2@0.01: 0.00
+PROGRESS 64 code full@all: 1.00
+PROGRESS 64 code lr32@0.02: 1.00
+PROGRESS 64 code lr32x@0.02: 1.00
+PROGRESS 65 code lr64x@0.02: 1.00
+PROGRESS 65 code lr32h@0.02: 1.00
+PROGRESS 65 code shared@0.02: 1.00
+PROGRESS 65 code xl2@0.02: 1.00
+PROGRESS 65 code xl3@0.02: 1.00
+PROGRESS 66 code lr32x@0.01: 0.48
+PROGRESS 66 code xl2@0.01: 1.00
+PROGRESS 66 code full@all: 0.27
+PROGRESS 66 code lr32@0.02: 0.33
+PROGRESS 66 code lr32x@0.02: 0.27
+PROGRESS 67 code lr64x@0.02: 0.27
+PROGRESS 67 code lr32h@0.02: 0.33
+PROGRESS 67 code shared@0.02: 0.33
+PROGRESS 67 code xl2@0.02: 0.27
+PROGRESS 67 code xl3@0.02: 0.27
+PROGRESS 68 code lr32x@0.01: 0.26
+PROGRESS 68 code xl2@0.01: 0.26
+PROGRESS 68 code full@all: 1.00
+PROGRESS 68 code lr32@0.02: 1.00
+PROGRESS 69 code lr32x@0.02: 0.26
+PROGRESS 69 code lr64x@0.02: 1.00
+PROGRESS 69 code lr32h@0.02: 1.00
+PROGRESS 69 code shared@0.02: 1.00
+PROGRESS 69 code xl2@0.02: 0.35
+PROGRESS 70 code xl3@0.02: 0.19
+PROGRESS 70 code lr32x@0.01: 0.19
+PROGRESS 70 code xl2@0.01: 0.39
+PROGRESS 70 code full@all: 0.98
+PROGRESS 70 code lr32@0.02: 0.98
+PROGRESS 71 code lr32x@0.02: 0.98
+PROGRESS 71 code lr64x@0.02: 0.98
+PROGRESS 71 code lr32h@0.02: 0.98
+PROGRESS 71 code shared@0.02: 0.98
+PROGRESS 71 code xl2@0.02: 0.63
+PROGRESS 72 code xl3@0.02: 0.13
+PROGRESS 72 code lr32x@0.01: 0.98
+PROGRESS 72 code xl2@0.01: 0.63
+PROGRESS 72 code full@all: 0.16
+PROGRESS 72 code lr32@0.02: 0.16
+PROGRESS 73 code lr32x@0.02: 0.16
+PROGRESS 73 code lr64x@0.02: 0.16
+PROGRESS 73 code lr32h@0.02: 0.16
+PROGRESS 73 code shared@0.02: 0.11
+PROGRESS 73 code xl2@0.02: 0.11
+PROGRESS 74 code xl3@0.02: 0.11
+PROGRESS 74 code lr32x@0.01: 0.16
+PROGRESS 74 code xl2@0.01: 0.11
+PROGRESS 74 code full@all: 0.14
+PROGRESS 74 code lr32@0.02: 0.17
+PROGRESS 75 code lr32x@0.02: 0.09
+PROGRESS 75 code lr64x@0.02: 0.17
+PROGRESS 75 code lr32h@0.02: 0.17
+PROGRESS 75 code shared@0.02: 0.17
+PROGRESS 75 code xl2@0.02: 0.14
+PROGRESS 76 code xl3@0.02: 0.21
+PROGRESS 76 code lr32x@0.01: 0.12
+PROGRESS 76 code xl2@0.01: 0.27
+PROGRESS 76 code full@all: 0.52
+PROGRESS 76 code lr32@0.02: 0.52
+PROGRESS 77 code lr32x@0.02: 0.51
+PROGRESS 77 code lr64x@0.02: 0.52
+PROGRESS 77 code lr32h@0.02: 0.52
+PROGRESS 77 code shared@0.02: 0.52
+PROGRESS 77 code xl2@0.02: 0.52
+PROGRESS 78 code xl3@0.02: 0.16
+PROGRESS 78 code lr32x@0.01: 0.52
+PROGRESS 78 code xl2@0.01: 0.52
+PROGRESS 78 code full@all: 0.47
+PROGRESS 79 code lr32@0.02: 0.44
+PROGRESS 79 code lr32x@0.02: 0.44
+PROGRESS 79 code lr64x@0.02: 0.47
+PROGRESS 79 code lr32h@0.02: 0.44
+PROGRESS 79 code shared@0.02: 0.44
+PROGRESS 80 code xl2@0.02: 0.44
+PROGRESS 80 code xl3@0.02: 0.47
+PROGRESS 80 code lr32x@0.01: 0.47
+PROGRESS 80 code xl2@0.01: 0.44
+PROGRESS 80 code full@all: 1.00
+PROGRESS 81 code lr32@0.02: 0.20
+PROGRESS 81 code lr32x@0.02: 0.28
+PROGRESS 81 code lr64x@0.02: 0.23
+PROGRESS 81 code lr32h@0.02: 0.22
+PROGRESS 81 code shared@0.02: 0.22
+PROGRESS 82 code xl2@0.02: 0.41
+PROGRESS 82 code xl3@0.02: 0.13
+PROGRESS 82 code lr32x@0.01: 0.28
+PROGRESS 82 code xl2@0.01: 0.28
+PROGRESS 82 code full@all: 0.16
+PROGRESS 83 code lr32@0.02: 0.16
+PROGRESS 83 code lr32x@0.02: 0.16
+PROGRESS 83 code lr64x@0.02: 0.16
+PROGRESS 83 code lr32h@0.02: 0.16
+PROGRESS 83 code shared@0.02: 0.16
+PROGRESS 84 code xl2@0.02: 0.18
+PROGRESS 84 code xl3@0.02: 0.16
+PROGRESS 84 code lr32x@0.01: 0.16
+PROGRESS 84 code xl2@0.01: 0.18
+PROGRESS 84 code full@all: 0.10
+PROGRESS 85 code lr32@0.02: 0.10
+PROGRESS 85 code lr32x@0.02: 0.10
+PROGRESS 85 code lr64x@0.02: 0.10
+PROGRESS 85 code lr32h@0.02: 0.15
+PROGRESS 85 code shared@0.02: 0.10
+PROGRESS 86 code xl2@0.02: 0.10
+PROGRESS 86 code xl3@0.02: 0.10
+PROGRESS 86 code lr32x@0.01: 0.10
+PROGRESS 86 code xl2@0.01: 0.15
+PROGRESS 86 code full@all: 0.19
+PROGRESS 87 code lr32@0.02: 0.07
+PROGRESS 87 code lr32x@0.02: 0.07
+PROGRESS 87 code lr64x@0.02: 0.07
+PROGRESS 87 code lr32h@0.02: 0.07
+PROGRESS 88 code shared@0.02: 0.07
+PROGRESS 88 code xl2@0.02: 0.18
+PROGRESS 88 code xl3@0.02: 0.07
+PROGRESS 88 code lr32x@0.01: 0.07
+PROGRESS 88 code xl2@0.01: 0.18
+PROGRESS 89 code full@all: 0.38
+PROGRESS 89 code lr32@0.02: 0.38
+PROGRESS 89 code lr32x@0.02: 0.24
+PROGRESS 89 code lr64x@0.02: 0.24
+PROGRESS 89 code lr32h@0.02: 0.38
+PROGRESS 90 code shared@0.02: 0.38
+PROGRESS 90 code xl2@0.02: 0.77
+PROGRESS 90 code xl3@0.02: 0.19
+PROGRESS 90 code lr32x@0.01: 0.26
+PROGRESS 90 code xl2@0.01: 0.26
+PROGRESS 91 code full@all: 0.07
+PROGRESS 91 code lr32@0.02: 1.00
+PROGRESS 91 code lr32x@0.02: 0.07
+PROGRESS 91 code lr64x@0.02: 0.17
+PROGRESS 91 code lr32h@0.02: 0.96
+PROGRESS 92 code shared@0.02: 1.00
+PROGRESS 92 code xl2@0.02: 0.04
+PROGRESS 92 code xl3@0.02: 0.21
+PROGRESS 92 code lr32x@0.01: 0.09
+PROGRESS 92 code xl2@0.01: 0.04
+PROGRESS 93 code full@all: 0.16
+PROGRESS 93 code lr32@0.02: 1.00
+PROGRESS 93 code lr32x@0.02: 0.22
+PROGRESS 93 code lr64x@0.02: 1.00
+PROGRESS 93 code lr32h@0.02: 0.19
+PROGRESS 94 code shared@0.02: 0.19
+PROGRESS 94 code xl2@0.02: 0.23
+PROGRESS 94 code xl3@0.02: 0.19
+PROGRESS 94 code lr32x@0.01: 0.21
+PROGRESS 94 code xl2@0.01: 0.18
+PROGRESS 95 code full@all: 1.00
+PROGRESS 95 code lr32@0.02: 1.00
+PROGRESS 95 code lr32x@0.02: 1.00
+PROGRESS 95 code lr64x@0.02: 1.00
+PROGRESS 95 code lr32h@0.02: 1.00
+PROGRESS 96 code shared@0.02: 1.00
+PROGRESS 96 code xl2@0.02: 0.13
+PROGRESS 96 code xl3@0.02: 0.15
+PROGRESS 96 code lr32x@0.01: 0.32
+PROGRESS 97 code xl2@0.01: 1.00
+RESULT {"needle": {"full@all": 1.0, "lr32@2%": 1.0, "lr32x@2%": 1.0, "lr64x@2%": 1.0, "lr32h@2%": 1.0, "shared@2%": 1.0, "xl2@2%": 1.0, "xl3@2%": 0.767, "lr32x@1%": 1.0, "xl2@1%": 0.831}, "essay-complete": {"full@all": 0.671, "lr32@2%": 0.484, "lr32x@2%": 0.567, "lr64x@2%": 0.719, "lr32h@2%": 0.525, "shared@2%": 0.611, "xl2@2%": 0.309, "xl3@2%": 0.286, "lr32x@1%": 0.391, "xl2@1%": 0.312}, "code-next": {"full@all": 0.476, "lr32@2%": 0.533, "lr32x@2%": 0.366, "lr64x@2%": 0.472, "lr32h@2%": 0.484, "shared@2%": 0.48, "xl2@2%": 0.343, "xl3@2%": 0.234, "lr32x@1%": 0.293, "xl2@1%": 0.367}}

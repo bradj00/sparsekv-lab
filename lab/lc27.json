@@ -1,0 +1,1913 @@
+{
+ "32K": {
+  "rows": [
+   {
+    "task": "needle",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6062116459425952,
+    "ws": 0.24778712168335915,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4916958139381475,
+    "ws": 0.09593750536441803,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.406166148190904,
+    "ws": 0.05495898681692779,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6201945043316013,
+    "ws": 0.35470900032669306,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5051965298449719,
+    "ws": 0.14337695902213454,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.42387778919778374,
+    "ws": 0.0825898468028754,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.597327434271574,
+    "ws": 0.257605480030179,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4784740397085746,
+    "ws": 0.09385156678035855,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3777837239117739,
+    "ws": 0.07323047192767262,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6043565978429147,
+    "ws": 0.2905293069779873,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.47817587535384865,
+    "ws": 0.11446680221706629,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.37993874620380147,
+    "ws": 0.06523242476396263,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.5847899375483394,
+    "ws": 0.26910352520644665,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.45715404112512864,
+    "ws": 0.09962695743888617,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3651543484690289,
+    "ws": 0.055302736815065145,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.590817686259037,
+    "ws": 0.3146015778183937,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4619679570065013,
+    "ws": 0.12046875525265932,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3626402332447469,
+    "ws": 0.0715507841669023,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6007327979896218,
+    "ws": 0.26451954152435064,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4722125437692739,
+    "ws": 0.10332422330975533,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.380294135393342,
+    "ws": 0.05698633170686662,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "# offsets tensor stays int32, which indexes any realistic batch).",
+    "gold": "# offsets tensor stays int32, which indexes any realistic batch)."
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 0.2028985507246377,
+    "mass": 0.6057144387371161,
+    "ws": 0.2621621210128069,
+    "pred": "# tokens (same widen-on-load as the pairs kernel below; the host-side",
+    "gold": "# offsets tensor stays int32, which indexes any realistic batch)."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 0.2028985507246377,
+    "mass": 0.4876541508869691,
+    "ws": 0.10528906807303429,
+    "pred": "# tokens (same widen-on-load as the pairs kernel below; the host-side",
+    "gold": "# offsets tensor stays int32, which indexes any realistic batch)."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4104404897429049,
+    "ws": 0.06123242457397282,
+    "pred": "# offsets tensor stays int32, which indexes any realistic batch).",
+    "gold": "# offsets tensor stays int32, which indexes any realistic batch)."
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)",
+    "gold": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6593383528806013,
+    "ws": 0.3061504019424319,
+    "pred": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)",
+    "gold": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5421963034294032,
+    "ws": 0.12111328635364771,
+    "pred": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)",
+    "gold": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4565660669709203,
+    "ws": 0.0669804725330323,
+    "pred": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)",
+    "gold": "workers = max_workers or min(max(len(to_run), 1), os.cpu_count() or 8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 0.9682539682539683,
+    "mass": null,
+    "ws": null,
+    "pred": "swallows its own streaming exceptions but finalize_generation",
+    "gold": "# swallows its own streaming exceptions but finalize_generation"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6404923943181833,
+    "ws": 0.23637501057237387,
+    "pred": "# swallows its own streaming exceptions but finalize_generation",
+    "gold": "# swallows its own streaming exceptions but finalize_generation"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5266421812276045,
+    "ws": 0.0930839879438281,
+    "pred": "# swallows its own streaming exceptions but finalize_generation",
+    "gold": "# swallows its own streaming exceptions but finalize_generation"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.44179164357483386,
+    "ws": 0.05052148667164147,
+    "pred": "# swallows its own streaming exceptions but finalize_generation",
+    "gold": "# swallows its own streaming exceptions but finalize_generation"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "joins the trainer via whichever rendezvous mode `init_info` carries.",
+    "gold": "joins the trainer via whichever rendezvous mode `init_info` carries."
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6231437340556156,
+    "ws": 0.26215626019984484,
+    "pred": "joins the trainer via whichever rendezvous mode `init_info` carries.",
+    "gold": "joins the trainer via whichever rendezvous mode `init_info` carries."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.48953646913703,
+    "ws": 0.10997461434453726,
+    "pred": "joins the trainer via whichever rendezvous mode `init_info` carries.",
+    "gold": "joins the trainer via whichever rendezvous mode `init_info` carries."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3912933479018864,
+    "ws": 0.06277148681692779,
+    "pred": "joins the trainer via whichever rendezvous mode `init_info` carries.",
+    "gold": "joins the trainer via whichever rendezvous mode `init_info` carries."
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": ") -> tuple[torch.Tensor, torch.Tensor]:",
+    "gold": ") -> tuple[torch.Tensor, torch.Tensor]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6238555017625913,
+    "ws": 0.24333985429257154,
+    "pred": ") -> tuple[torch.Tensor, torch.Tensor]:",
+    "gold": ") -> tuple[torch.Tensor, torch.Tensor]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4845694337855093,
+    "ws": 0.092783207539469,
+    "pred": ") -> tuple[torch.Tensor, torch.Tensor]:",
+    "gold": ") -> tuple[torch.Tensor, torch.Tensor]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.39349786762613803,
+    "ws": 0.05044140852987766,
+    "pred": ") -> tuple[torch.Tensor, torch.Tensor]:",
+    "gold": ") -> tuple[torch.Tensor, torch.Tensor]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "\"For most models, the chat template takes care of adding the \"",
+    "gold": "\"For most models, the chat template takes care of adding the \""
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6309485968790556,
+    "ws": 0.26039845030754805,
+    "pred": "\"For most models, the chat template takes care of adding the \"",
+    "gold": "\"For most models, the chat template takes care of adding the \""
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4960803188824732,
+    "ws": 0.1084746140986681,
+    "pred": "\"For most models, the chat template takes care of adding the \"",
+    "gold": "\"For most models, the chat template takes care of adding the \""
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.40632724163955763,
+    "ws": 0.06136523769237101,
+    "pred": "\"For most models, the chat template takes care of adding the \"",
+    "gold": "\"For most models, the chat template takes care of adding the \""
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "\"\"\"Reduce the observations collected during a time interval to one or",
+    "gold": "\"\"\"Reduce the observations collected during a time interval to one or"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6607819201631678,
+    "ws": 0.24913672916591167,
+    "pred": "\"\"\"Reduce the observations collected during a time interval to one or",
+    "gold": "\"\"\"Reduce the observations collected during a time interval to one or"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5333936003347238,
+    "ws": 0.09722656710073352,
+    "pred": "\"\"\"Reduce the observations collected during a time interval to one or",
+    "gold": "\"\"\"Reduce the observations collected during a time interval to one or"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4385940135560102,
+    "ws": 0.05430664378218353,
+    "pred": "\"\"\"Reduce the observations collected during a time interval to one or",
+    "gold": "\"\"\"Reduce the observations collected during a time interval to one or"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\"",
+    "gold": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\""
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6787519824245701,
+    "ws": 0.2326132906600833,
+    "pred": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\"",
+    "gold": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\""
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5466202289756873,
+    "ws": 0.09375976910814643,
+    "pred": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\"",
+    "gold": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\""
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4527826846131812,
+    "ws": 0.051837893668562174,
+    "pred": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\"",
+    "gold": "\"\"\"FlashModel whose input embedding is an :class:`NgramEmbedding`.\"\"\""
+   }
+  ],
+  "summary": {
+   "needle": {
+    "full@all": {
+     "score": 1.0,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 1.0,
+     "mass": 0.606,
+     "ws": 0.248
+    },
+    "sh64x@0.01": {
+     "score": 1.0,
+     "mass": 0.492,
+     "ws": 0.096
+    },
+    "sh64x@0.005": {
+     "score": 1.0,
+     "mass": 0.406,
+     "ws": 0.055
+    }
+   },
+   "essay-complete": {
+    "full@all": {
+     "score": 1.0,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 1.0,
+     "mass": 0.6,
+     "ws": 0.292
+    },
+    "sh64x@0.01": {
+     "score": 1.0,
+     "mass": 0.476,
+     "ws": 0.113
+    },
+    "sh64x@0.005": {
+     "score": 1.0,
+     "mass": 0.382,
+     "ws": 0.067
+    }
+   },
+   "code-next": {
+    "full@all": {
+     "score": 0.996,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 0.9,
+     "mass": 0.64,
+     "ws": 0.257
+    },
+    "sh64x@0.01": {
+     "score": 0.9,
+     "mass": 0.513,
+     "ws": 0.103
+    },
+    "sh64x@0.005": {
+     "score": 1.0,
+     "mass": 0.424,
+     "ws": 0.057
+    }
+   }
+  },
+  "complete": true
+ },
+ "64K": {
+  "rows": [
+   {
+    "task": "needle",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6399166873759694,
+    "ws": 0.24899220000952482,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5284019929046432,
+    "ws": 0.09996191831305623,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4451436542181505,
+    "ws": 0.05600293260067701,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "needle",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6272635121962854,
+    "ws": 0.2770420014858246,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5032815781998492,
+    "ws": 0.108607426751405,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4233994937856637,
+    "ws": 0.06006347993388772,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6315391630326447,
+    "ws": 0.2821591915562749,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.48992034743883106,
+    "ws": 0.11685156635940075,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4022469305629401,
+    "ws": 0.06584863597527146,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6346389015338251,
+    "ws": 0.29224220011383295,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4991768415396412,
+    "ws": 0.11779297469183803,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.40564830131119206,
+    "ws": 0.06593359657563269,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.5887363859053169,
+    "ws": 0.2741787238046527,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4852648302912712,
+    "ws": 0.09872070793062449,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.38138277211692184,
+    "ws": 0.055838869884610176,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6059772678111729,
+    "ws": 0.2623525531962514,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.46223585704635634,
+    "ws": 0.10621484881266952,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3753095217490275,
+    "ws": 0.057354494696483016,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6013395603001118,
+    "ws": 0.31997169461101294,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4618927552551031,
+    "ws": 0.13801758456975222,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3809317687526345,
+    "ws": 0.0772431674413383,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6179085999889218,
+    "ws": 0.26839942671358585,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.46873136897287937,
+    "ws": 0.11302734958007932,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.39773231791332364,
+    "ws": 0.05698926071636379,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "prune_configs_by={\"early_config_prune\": _prune_configs},",
+    "gold": "prune_configs_by={\"early_config_prune\": _prune_configs},"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6843445688663494,
+    "ws": 0.25721192359924316,
+    "pred": "prune_configs_by={\"early_config_prune\": _prune_configs},",
+    "gold": "prune_configs_by={\"early_config_prune\": _prune_configs},"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.569231300215636,
+    "ws": 0.09858691925182939,
+    "pred": "prune_configs_by={\"early_config_prune\": _prune_configs},",
+    "gold": "prune_configs_by={\"early_config_prune\": _prune_configs},"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.49685591583450633,
+    "ws": 0.054604494478553534,
+    "pred": "prune_configs_by={\"early_config_prune\": _prune_configs},",
+    "gold": "prune_configs_by={\"early_config_prune\": _prune_configs},"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "stale positional call fails loudly instead of silently swapping arguments.",
+    "gold": "stale positional call fails loudly instead of silently swapping arguments."
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6573752440098259,
+    "ws": 0.24025489389896393,
+    "pred": "stale positional call fails loudly instead of silently swapping arguments.",
+    "gold": "stale positional call fails loudly instead of silently swapping arguments."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.528906870012482,
+    "ws": 0.09959472995251417,
+    "pred": "stale positional call fails loudly instead of silently swapping arguments.",
+    "gold": "stale positional call fails loudly instead of silently swapping arguments."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.44717409466910696,
+    "ws": 0.05623047146946192,
+    "pred": "stale positional call fails loudly instead of silently swapping arguments.",
+    "gold": "stale positional call fails loudly instead of silently swapping arguments."
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "num_kv_heads=config.num_key_value_heads,",
+    "gold": "num_kv_heads=config.num_key_value_heads,"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.609700934828392,
+    "ws": 0.24588379822671413,
+    "pred": "num_kv_heads=config.num_key_value_heads,",
+    "gold": "num_kv_heads=config.num_key_value_heads,"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4551880744485451,
+    "ws": 0.09581445809453726,
+    "pred": "num_kv_heads=config.num_key_value_heads,",
+    "gold": "num_kv_heads=config.num_key_value_heads,"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.36152020771987736,
+    "ws": 0.05323437764309347,
+    "pred": "num_kv_heads=config.num_key_value_heads,",
+    "gold": "num_kv_heads=config.num_key_value_heads,"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "as produced by the ``ngram_compute_n_gram_ids`` kernel.",
+    "gold": "as produced by the ``ngram_compute_n_gram_ids`` kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6342292598194696,
+    "ws": 0.3013613475486636,
+    "pred": "as produced by the ``ngram_compute_n_gram_ids`` kernel.",
+    "gold": "as produced by the ``ngram_compute_n_gram_ids`` kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.49437580367719586,
+    "ws": 0.1239648493938148,
+    "pred": "as produced by the ``ngram_compute_n_gram_ids`` kernel.",
+    "gold": "as produced by the ``ngram_compute_n_gram_ids`` kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.40695147235369816,
+    "ws": 0.06844726880080998,
+    "pred": "as produced by the ``ngram_compute_n_gram_ids`` kernel.",
+    "gold": "as produced by the ``ngram_compute_n_gram_ids`` kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "cu_num_chunks, offset=offset, mask_and_clamp=0",
+    "gold": "cu_num_chunks, offset=offset, mask_and_clamp=0"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6514280698213138,
+    "ws": 0.2652246216312051,
+    "pred": "cu_num_chunks, offset=offset, mask_and_clamp=0",
+    "gold": "cu_num_chunks, offset=offset, mask_and_clamp=0"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 0.3695652173913043,
+    "mass": 0.5133060720283538,
+    "ws": 0.09277637209743261,
+    "pred": "cu_num_chunks += lower",
+    "gold": "cu_num_chunks, offset=offset, mask_and_clamp=0"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 0.3695652173913043,
+    "mass": 0.427836004504934,
+    "ws": 0.050665041198953986,
+    "pred": "cu_num_chunks += lower",
+    "gold": "cu_num_chunks, offset=offset, mask_and_clamp=0"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "return MultiModelKeys.from_string_field(",
+    "gold": "return MultiModelKeys.from_string_field("
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6200891046856458,
+    "ws": 0.24772071558982134,
+    "pred": "return MultiModelKeys.from_string_field(",
+    "gold": "return MultiModelKeys.from_string_field("
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.47014277016457456,
+    "ws": 0.09964551171287894,
+    "pred": "return MultiModelKeys.from_string_field(",
+    "gold": "return MultiModelKeys.from_string_field("
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.38507976099992025,
+    "ws": 0.05393066653050482,
+    "pred": "return MultiModelKeys.from_string_field(",
+    "gold": "return MultiModelKeys.from_string_field("
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 0.16417910447761197,
+    "mass": null,
+    "ws": null,
+    "pred": "o_derot = ops.inverse_gptj_rope_o_proj_cpu(",
+    "gold": "# Undo the query's own GPT-J RoPE rotation: the attention output is"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 0.9710144927536232,
+    "mass": 0.6425691870972514,
+    "ws": 0.30070313811302185,
+    "pred": "`# Undo the query's own GPT-J RoPE rotation: the attention output is`",
+    "gold": "# Undo the query's own GPT-J RoPE rotation: the attention output is"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 0.16417910447761197,
+    "mass": 0.4883473061158189,
+    "ws": 0.12151367822661996,
+    "pred": "`o_derot = ops.inverse_gptj_rope_o_proj_cpu(`",
+    "gold": "# Undo the query's own GPT-J RoPE rotation: the attention output is"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 0.16417910447761197,
+    "mass": 0.38657030364542844,
+    "ws": 0.06757910526357591,
+    "pred": "`o_derot = ops.inverse_gptj_rope_o_proj_cpu(`",
+    "gold": "# Undo the query's own GPT-J RoPE rotation: the attention output is"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "if int(token_ids[-1]) == self.eos_token_id:",
+    "gold": "if int(token_ids[-1]) == self.eos_token_id:"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6635380427500135,
+    "ws": 0.27229591086506844,
+    "pred": "if int(token_ids[-1]) == self.eos_token_id:",
+    "gold": "if int(token_ids[-1]) == self.eos_token_id:"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5162717108614743,
+    "ws": 0.11058496590703726,
+    "pred": "if int(token_ids[-1]) == self.eos_token_id:",
+    "gold": "if int(token_ids[-1]) == self.eos_token_id:"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4305603827080248,
+    "ws": 0.0602519556414336,
+    "pred": "if int(token_ids[-1]) == self.eos_token_id:",
+    "gold": "if int(token_ids[-1]) == self.eos_token_id:"
+   }
+  ],
+  "summary": {
+   "needle": {
+    "full@all": {
+     "score": 1.0,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 1.0,
+     "mass": 0.634,
+     "ws": 0.263
+    },
+    "sh64x@0.01": {
+     "score": 1.0,
+     "mass": 0.516,
+     "ws": 0.104
+    },
+    "sh64x@0.005": {
+     "score": 1.0,
+     "mass": 0.434,
+     "ws": 0.058
+    }
+   },
+   "essay-complete": {
+    "full@all": {
+     "score": 1.0,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 1.0,
+     "mass": 0.613,
+     "ws": 0.283
+    },
+    "sh64x@0.01": {
+     "score": 1.0,
+     "mass": 0.478,
+     "ws": 0.115
+    },
+    "sh64x@0.005": {
+     "score": 1.0,
+     "mass": 0.391,
+     "ws": 0.063
+    }
+   },
+   "code-next": {
+    "full@all": {
+     "score": 0.896,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 0.996,
+     "mass": 0.645,
+     "ws": 0.266
+    },
+    "sh64x@0.01": {
+     "score": 0.817,
+     "mass": 0.504,
+     "ws": 0.105
+    },
+    "sh64x@0.005": {
+     "score": 0.817,
+     "mass": 0.418,
+     "ws": 0.058
+    }
+   }
+  },
+  "complete": true
+ },
+ "128K": {
+  "rows": [
+   {
+    "task": "needle",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6342395931068394,
+    "ws": 0.24502735491842031,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5235070973220799,
+    "ws": 0.09742383286356926,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4425875279379802,
+    "ws": 0.054637697292491794,
+    "pred": "Eat a sandwich and sit in Dolores Park on a sunny day.",
+    "gold": "eat a sandwich and sit in Dolores Park on a sunny day"
+   },
+   {
+    "task": "needle",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "needle",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6200945940578267,
+    "ws": 0.27096094843000174,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5023614169497576,
+    "ws": 0.10677441814914346,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "needle",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.42663676016742275,
+    "ws": 0.059176272014155984,
+    "pred": "Watch the glassblowers work by the tidal pools when the jacarandas bloom.",
+    "gold": "watch the glassblowers work by the tidal pools when the jacarandas bloom"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6125949859353048,
+    "ws": 0.25470851082354784,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.46872584183107724,
+    "ws": 0.1026040087454021,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.38550721820105205,
+    "ws": 0.058668948942795396,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.5943230425652403,
+    "ws": 0.2907866323366761,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.44483307107853204,
+    "ws": 0.11600098107010126,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3415797763468268,
+    "ws": 0.06835596007294953,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.5870105460610079,
+    "ws": 0.3249160312116146,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4453501765332792,
+    "ws": 0.14225928438827395,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 0.1875,
+    "mass": 0.31615863704001124,
+    "ws": 0.07271973020397127,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.5847603979387453,
+    "ws": 0.28516261000186205,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.42986009717874585,
+    "ws": 0.11768115824088454,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.3399702946300663,
+    "ws": 0.06705322535708547,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6318081099953916,
+    "ws": 0.27418702375143766,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.49911345049945843,
+    "ws": 0.11032910738140345,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.41896230629127884,
+    "ws": 0.06283349846489727,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6462791534688543,
+    "ws": 0.254369149915874,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.516782044652192,
+    "ws": 0.10176123538985848,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "essay-complete",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.426377114454477,
+    "ws": 0.062424319330602884,
+    "pred": "[redacted: third-party essay text]",
+    "gold": "[redacted: third-party essay text]"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 0.7254901960784313,
+    "mass": null,
+    "ws": null,
+    "pred": "for b in [32, 64, 128, 256, 512, 1024",
+    "gold": "for b in [32, 64, 128, 256, 512, 1024, 2048, 4096]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 0.7254901960784313,
+    "mass": 0.6606574443035892,
+    "ws": 0.30641798581928015,
+    "pred": "for b in [32, 64, 128, 256, 512, 1024",
+    "gold": "for b in [32, 64, 128, 256, 512, 1024, 2048, 4096]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 0.7254901960784313,
+    "mass": 0.5434094494696529,
+    "ws": 0.12863428378477693,
+    "pred": "for b in [32, 64, 128, 256, 512, 1024",
+    "gold": "for b in [32, 64, 128, 256, 512, 1024, 2048, 4096]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 0.7254901960784313,
+    "mass": 0.46425255150755956,
+    "ws": 0.07451806985773146,
+    "pred": "for b in [32, 64, 128, 256, 512, 1024",
+    "gold": "for b in [32, 64, 128, 256, 512, 1024, 2048, 4096]:"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)",
+    "gold": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.654093567362946,
+    "ws": 0.2883979622274637,
+    "pred": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)",
+    "gold": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5292498954450306,
+    "ws": 0.1124409232288599,
+    "pred": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)",
+    "gold": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.44489624124506244,
+    "ws": 0.06368896807543933,
+    "pred": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)",
+    "gold": "self.counter_kv_bytes[(engine_idx, _TransferType.LOAD)].inc(value)"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "chunk_indices[chunk_start + chunk_id, 0] = seq_id",
+    "gold": "chunk_indices[chunk_start + chunk_id, 0] = seq_id"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.643426559586078,
+    "ws": 0.26604151632636786,
+    "pred": "chunk_indices[chunk_start + chunk_id, 0] = seq_id",
+    "gold": "chunk_indices[chunk_start + chunk_id, 0] = seq_id"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5089566181180999,
+    "ws": 0.10358154680579901,
+    "pred": "chunk_indices[chunk_start + chunk_id, 0] = seq_id",
+    "gold": "chunk_indices[chunk_start + chunk_id, 0] = seq_id"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.41916953383479266,
+    "ws": 0.058969729812815785,
+    "pred": "chunk_indices[chunk_start + chunk_id, 0] = seq_id",
+    "gold": "chunk_indices[chunk_start + chunk_id, 0] = seq_id"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "# No head-count padding constraint for the (not yet ported) CPU kernel.",
+    "gold": "# No head-count padding constraint for the (not yet ported) CPU kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6407560736406595,
+    "ws": 0.3077763821929693,
+    "pred": "# No head-count padding constraint for the (not yet ported) CPU kernel.",
+    "gold": "# No head-count padding constraint for the (not yet ported) CPU kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4909832648312052,
+    "ws": 0.12432373780757189,
+    "pred": "# No head-count padding constraint for the (not yet ported) CPU kernel.",
+    "gold": "# No head-count padding constraint for the (not yet ported) CPU kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4001667373231612,
+    "ws": 0.07057519815862179,
+    "pred": "# No head-count padding constraint for the (not yet ported) CPU kernel.",
+    "gold": "# No head-count padding constraint for the (not yet ported) CPU kernel."
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)",
+    "gold": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6406226682548339,
+    "ws": 0.30125196278095245,
+    "pred": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)",
+    "gold": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.4955145053637142,
+    "ws": 0.11839600140228868,
+    "pred": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)",
+    "gold": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4089658262394369,
+    "ws": 0.06664892984554172,
+    "pred": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)",
+    "gold": "mask = async_tensor_h2d(is_token_ids, device=self.device, dtype=torch.uint8)"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "delta = compute_tool_delta(",
+    "gold": "delta = compute_tool_delta("
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6436729275367477,
+    "ws": 0.24566798098385334,
+    "pred": "delta = compute_tool_delta(",
+    "gold": "delta = compute_tool_delta("
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5116375579752706,
+    "ws": 0.09603369701653719,
+    "pred": "delta = compute_tool_delta(",
+    "gold": "delta = compute_tool_delta("
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.4226487710309977,
+    "ws": 0.05374414334073663,
+    "pred": "delta = compute_tool_delta(",
+    "gold": "delta = compute_tool_delta("
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "raise ValueError(\"page_table must have shape [batch, max_pages]\")",
+    "gold": "raise ValueError(\"page_table must have shape [batch, max_pages]\")"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6737566768590894,
+    "ws": 0.2942334087565541,
+    "pred": "raise ValueError(\"page_table must have shape [batch, max_pages]\")",
+    "gold": "raise ValueError(\"page_table must have shape [batch, max_pages]\")"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5234998721363289,
+    "ws": 0.12635254487395287,
+    "pred": "raise ValueError(\"page_table must have shape [batch, max_pages]\")",
+    "gold": "raise ValueError(\"page_table must have shape [batch, max_pages]\")"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.43849390938079785,
+    "ws": 0.07033349922858179,
+    "pred": "raise ValueError(\"page_table must have shape [batch, max_pages]\")",
+    "gold": "raise ValueError(\"page_table must have shape [batch, max_pages]\")"
+   },
+   {
+    "task": "code-next",
+    "arm": "full@all",
+    "score": 1.0,
+    "mass": null,
+    "ws": null,
+    "pred": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28",
+    "gold": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28"
+   },
+   {
+    "task": "code-next",
+    "arm": "oracle@0.01",
+    "score": 1.0,
+    "mass": 0.6684012234521409,
+    "ws": 0.3264931794255972,
+    "pred": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28",
+    "gold": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.01",
+    "score": 1.0,
+    "mass": 0.5375259378148863,
+    "ws": 0.1443442446179688,
+    "pred": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28",
+    "gold": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28"
+   },
+   {
+    "task": "code-next",
+    "arm": "sh64x@0.005",
+    "score": 1.0,
+    "mass": 0.44684082543891335,
+    "ws": 0.0857656302396208,
+    "pred": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28",
+    "gold": "# frames, each at the video processor's per-frame ``max_pixels`` (768 * 28 * 28"
+   }
+  ],
+  "summary": {
+   "needle": {
+    "full@all": {
+     "score": 1.0,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 1.0,
+     "mass": 0.627,
+     "ws": 0.258
+    },
+    "sh64x@0.01": {
+     "score": 1.0,
+     "mass": 0.513,
+     "ws": 0.102
+    },
+    "sh64x@0.005": {
+     "score": 1.0,
+     "mass": 0.435,
+     "ws": 0.057
+    }
+   },
+   "essay-complete": {
+    "full@all": {
+     "score": 1.0,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 1.0,
+     "mass": 0.609,
+     "ws": 0.281
+    },
+    "sh64x@0.01": {
+     "score": 1.0,
+     "mass": 0.467,
+     "ws": 0.115
+    },
+    "sh64x@0.005": {
+     "score": 0.865,
+     "mass": 0.371,
+     "ws": 0.065
+    }
+   },
+   "code-next": {
+    "full@all": {
+     "score": 0.966,
+     "mass": null,
+     "ws": null
+    },
+    "oracle@0.01": {
+     "score": 0.966,
+     "mass": 0.653,
+     "ws": 0.292
+    },
+    "sh64x@0.01": {
+     "score": 0.966,
+     "mass": 0.518,
+     "ws": 0.119
+    },
+    "sh64x@0.005": {
+     "score": 0.966,
+     "mass": 0.431,
+     "ws": 0.068
+    }
+   }
+  },
+  "complete": true
+ }
+}

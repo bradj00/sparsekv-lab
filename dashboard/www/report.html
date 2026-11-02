@@ -1,0 +1,195 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sparse KV report</title>
+<style>body{background:#0b0e14;color:#e6eaf2;font:15px/1.6 system-ui,sans-serif;max-width:980px;margin:0 auto;padding:24px}h1,h2{color:#7dd3fc}table{border-collapse:collapse;margin:12px 0;width:100%}th,td{border:1px solid #232b3d;padding:6px 9px;text-align:left}th{background:#171d2b}code{background:#171d2b;padding:1px 5px;border-radius:4px}a{color:#38bdf8}strong{color:#34d399}</style></head><body><h1>Pruning without forgetting: query-aware sparse KV for the 27B on 2×3090</h1>
+<p><em>Report from round 3. Written 2026-10-31 by Claude.</em></p>
+<h2>Summary</h2>
+<p>TokenGate breaks multi-turn agents. It decides once, before the question exists, which tokens to throw away forever, and later turns lose the content (code recall 0.48 → 0.28).</p>
+<p>The fix is to never throw anything away. Every token's KV stays in host RAM. The GPU holds three things:</p>
+<ul>
+<li>a compact <strong>key sketch</strong> for every token: rank-64 projection of the keys, int8, 4 KB/token;</li>
+<li>a <strong>hot buffer</strong> holding about 20% of each context in full;</li>
+<li>the recent and sink tokens.</li>
+</ul>
+<p>At every decode step, each attention layer scores all tokens through the sketch, picks the <strong>top 2%</strong>, and runs exact attention on just those.</p>
+<p><strong>Results, Qwen3.5 hybrids (same architecture family as our 27B):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Later-turn recall (question asked after the context)</th>
+<th>Full context</th>
+<th><strong>Sketch @2%</strong></th>
+<th>TokenGate-style choose-once @25%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2B: needle / sentence recall / code next-line</td>
+<td>1.00 / 0.67 / 0.48</td>
+<td><strong>1.00 / 0.72 / 0.47</strong></td>
+<td>0.53 / 0.26 / 0.22</td>
+</tr>
+<tr>
+<td>9B: needle / sentence recall / code next-line</td>
+<td>1.00 / 0.87 / 0.93</td>
+<td><strong>1.00 / 0.89 / 0.93</strong></td>
+<td>0.65 / 0.28 / 0.45</td>
+</tr>
+<tr>
+<td><strong>27B (production W4A16)</strong>: needle / sentence recall / code next-line</td>
+<td>1.00 / 0.99 / 1.00</td>
+<td><strong>1.00 / 0.97 / 1.00</strong></td>
+<td>0.47 / 0.16 / 0.27</td>
+</tr>
+<tr>
+<td>9B SCBench, 5-turn shared context: KV lookup / RepoQA / prefix-suffix</td>
+<td>1.00 / 0.61 / 0.33</td>
+<td><strong>1.00 / 0.65 / 0.44</strong></td>
+<td>0.03 / 0.20 / 0.00</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Projected for the 27B on each 3090</strong> (a model built from the measurements below, not yet built and benchmarked). Design point: shared-head rank-64 int8 sketch, 1% budget, 10% hot buffer.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Today (dense server, int8 KV)</th>
+<th>With sparse KV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU memory per context token</td>
+<td>32 KB</td>
+<td><strong>≈7.2 KB</strong> (4 KB sketch + 10% hot buffer) → <strong>4.4×</strong></td>
+</tr>
+<tr>
+<td>Agents at 128K per card</td>
+<td>~1.9</td>
+<td><strong>~7</strong> (cache budget 8.1 GB; ~0.15 GB recurrent state per agent)</td>
+</tr>
+<tr>
+<td>Agents at 256K per card</td>
+<td>~1.0</td>
+<td><strong>~4</strong></td>
+</tr>
+<tr>
+<td>Whole box at 256K (2 cards)</td>
+<td>~2 agents</td>
+<td><strong>~6</strong> with int8 KV in host RAM (~48 GB pinned of 78 GB), <strong>~8</strong> if the host tier stores int4</td>
+</tr>
+<tr>
+<td>Fetch per decode step, 256K agent</td>
+<td>0</td>
+<td>~8 MB → 0.8 ms (x16) / 1.2 ms (x4), overlapped with linear layers</td>
+</tr>
+<tr>
+<td>Decode step, 2 agents at 128K / 256K</td>
+<td>1.0×</td>
+<td><strong>~1.45× / ~1.8× faster</strong> (7× fewer attention bytes)</td>
+</tr>
+<tr>
+<td>Information lost</td>
+<td>none</td>
+<td><strong>none</strong> (every token is retrievable)</td>
+</tr>
+</tbody>
+</table>
+<h2>What we proved, in order</h2>
+<ol>
+<li><strong>TokenGate fails for agents, because the decision is final.</strong> Its gate keeps the same tokens whether the question comes before or after the document: it doesn't read the question. At 25% keep, ordinary sentences keep 25% of their tokens and 0% survive intact.</li>
+<li><strong>Sparsity was never the problem; deciding early was.</strong> An oracle that picks the top 2% <em>per query</em> (exact attention scores) matches full context on all tasks. Picking once at the context boundary (SnapKV-style) or keeping only a recent window collapses to 0.10–0.37. Research agents found the same pattern in the literature (SCBench, ICLR'25).</li>
+<li><strong>A cheap selector matches the oracle.</strong></li>
+<li>A low-rank sketch of the keys picks as well as the oracle.</li>
+<li>Rank 64 is needed at 2B; at 9B even rank 32 is lossless.</li>
+<li>Quest-style page min/max bounds fail (sentence recall 0.26–0.43).</li>
+<li><em>Correction:</em> round 2 reported "rank 32 = oracle". That was a caching bug: the rank-64 sketch was being reused.</li>
+<li><strong>One fixed basis works for every document.</strong> A sketch basis fitted on a <em>different</em> document, even an essay used for code, is as good as one fitted on the document itself. So the basis can be fitted offline per layer and frozen. New tokens are projected when their KV is written, and prefix caching keeps working unchanged.</li>
+<li><strong>The int8 sketch is free.</strong> Results on all SCBench tasks are identical to the fp16 sketch, which halves the sketch to 4 KB/token.</li>
+<li><strong>Shared selection across KV heads works</strong> (0.97–1.00). One pick per layer for all 4 KV heads cuts the per-step selection the 3090 kernel must hold by 4×. That matters because the 3090's ~101 KB of shared memory caps the selection at about 4–6K tokens per step.</li>
+<li><strong>Cross-layer reuse does not work.</strong> Reusing one layer's pick for the next 1–2 attention layers drops sentence recall to 0.29–0.31. Each attention layer must pick for itself.</li>
+<li><strong>Long answers need a bigger buffer than short ones.</strong></li>
+<li>A 512-token answer touches about 40% of the document over its lifetime, against 11% for a 40-token answer.</li>
+<li>Step-to-step overlap of the pick is only about 61%.</li>
+<li>An LRU hot buffer of 20% of the context, tracked per token, misses about 6% of picks. That is about 10 MB per step for a 256K agent.</li>
+<li>16-token pages need 30% or more buffer, so fetch per token.</li>
+<li><strong>Fine-grained fetch costs nothing extra.</strong> The GPU reading pinned host RAM directly (zero-copy) runs at about 10 GB/s on the x16 card and 6.2 GB/s on the x4 card (link-saturated), <em>even with 512-byte rows</em>. So 10 MB/step costs about 1.0 ms (x16) or 1.6 ms (x4), and the fetch overlaps with the 3 linear-attention layers between attention layers.</li>
+<li>An earlier CPU-side gather looked slow; the CPU gather was the bottleneck, not PCIe.</li>
+<li><strong>Decode attention gets much cheaper.</strong><ul>
+<li>At 27B shapes (24 q heads, 4 KV heads, d256, 8 MTP verify queries), sketch scan + top-2% attention is <strong>5–9× faster than full fp16 attention</strong> at 128K–256K in a PyTorch microbenchmark.</li>
+<li>It reads 7× fewer bytes against our int8 KV.</li>
+<li>Our production kernel (pth-flash-attn int8) is faster than PyTorch's, so the real gain is projected from bytes moved: weights (~14 GB/step) plus attention bytes. That gives about 1.45× (128K) to 1.8× (256K) faster decode steps at batch 2.</li>
+</ul>
+</li>
+</ol>
+<h2>Squeeze test on the 27B: how lean can it go?</h2>
+<table>
+<thead>
+<tr>
+<th>27B (24K context)</th>
+<th>Full</th>
+<th>per-head r64 @1%</th>
+<th>shared-head r64 @2%</th>
+<th><strong>shared-head r64 @1%</strong></th>
+<th>per-head r32 @2%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Needle</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td><strong>1.00</strong></td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>Sentence recall</td>
+<td>0.99</td>
+<td>0.97</td>
+<td>0.97</td>
+<td><strong>1.00</strong></td>
+<td>0.97</td>
+</tr>
+<tr>
+<td>Code next-line</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td><strong>1.00</strong></td>
+<td>0.98</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Design point:</strong> rank-64 int8 sketch, <strong>one pick per layer shared by all 4 KV heads</strong>, and a <strong>1% budget</strong>.
+- At 256K this is about 2.6K tokens per step. That fits under the 3090 kernel's ~4–6K selection cap with room to spare.
+- It halves the exact-attention and fetch volume compared with 2%.</p>
+<h2>Design to build into HyperQwen</h2>
+<ul>
+<li><strong>Tiers:</strong> full int8 KV lives in pinned host RAM, viewed by the GPU via UVA. The GPU keeps:</li>
+<li>the int8 rank-64 key sketch for all tokens;</li>
+<li>a token-granular LRU hot buffer of about 10% of each context;</li>
+<li>the sink and recent windows;</li>
+<li>the GatedDeltaNet state, unchanged.</li>
+<li><strong>Selection:</strong> per attention layer and decode step:</li>
+<li>Project the 8 MTP verify queries through the frozen per-layer basis.</li>
+<li>Score them against the sketch.</li>
+<li>Pool across heads and queries, pick the top 1% <strong>shared by all KV heads</strong>, with a floor of about 1K and a cap of about 4K tokens.</li>
+<li>Missing rows come in over zero-copy, then exact attention runs on the picked set plus recent tokens.</li>
+<li><strong>Prefill:</strong> dense, as today. Sketch rows are written alongside KV rows.</li>
+<li><strong>Upstream base:</strong> vLLM HiSparse is already merged in our fork's 0.31 base, and open PR #59209 adds GQA, head_dim 256, the GDN hybrid cache manager and MTP selection reuse. Our new piece is the training-free sketch selector in place of the trained QSA indexer.</li>
+<li>Plan: <code>reports/hisparse-port-plan.md</code> — about 22 working days in 6 stages.</li>
+<li><strong>Quickest standalone win (stage 2 of the plan):</strong> sparse decode over the normal GPU cache, no host tier. That gives the decode-speed gain alone at long context (estimated −20% step time at 150K) with no PCIe risk.</li>
+</ul>
+<h2>Risks and open questions</h2>
+<ul>
+<li><strong>Validated on the real 27B (24K context).</strong> A custom packed-W4A16 loader (<code>lab/q27loader.py</code>, 13.5 GB) runs the production weights in the lab harness. Rank-64 foreign-basis sketch at 2% matched full context (above table). Longer contexts (128K+) on the 27B remain to be measured; the trend from 2B to 9B to 27B only got better.</li>
+<li><strong>Small samples on two SCBench subsets</strong> (9 and 12 questions). KV lookup (30) is solid. Contexts were 32K, not 128K+.</li>
+<li><strong>#59209 reports 17–20% slower decode at low concurrency</strong> even with zero misses, from upstream overheads. It needs profiling in our single- and dual-user regime.</li>
+<li><strong>Hot-buffer miss rate on real agent traces</strong> (tool-heavy, many turns) is unmeasured. The 10% buffer sizing comes from 9 cases of 512-token answers over 32K documents on the 9B: mean 9.6% misses, worst 16% (verbatim copying).</li>
+<li><strong>Fallback if the build stalls:</strong> plain int4 KV gives 2× capacity with no PCIe traffic.</li>
+</ul>
+<h2>Artefacts</h2>
+<ul>
+<li><strong>Lab scripts:</strong> <code>lab/{killtest,oracle,selector,variants,longans,scale,scb,overlap,kbench,uva,bw}.py</code>, plus logs <code>lab/*.log</code>.</li>
+<li><strong>Dashboard:</strong> <code>dashboard/</code> (sample state from this round in <code>dashboard/www/state.json</code>).</li>
+</ul></body></html>

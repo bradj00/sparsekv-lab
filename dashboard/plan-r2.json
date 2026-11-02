@@ -1,0 +1,10 @@
+{"title": "Round 2 · Pruning without forgetting",
+ "goal": "Keep every token available but only a query-selected slice on the GPU: 2× agents or 2× context with no lost recall?",
+ "phases": [
+  ["research", "Research fan-out (4 agents)", "Query-aware KV retrieval · revivable pruning · repo dig (vLLM/SGLang/kernels) · multi-turn eval protocols", 30],
+  ["lab", "Free the lab card", "The 3090 Ti keeps serving; the 3090 becomes the lab card again", 3],
+  ["oracle", "Oracle bound (the deciding test)", "Per-query exact top-k attention at 25% / 6% / 2% of the document vs query-agnostic eviction and sliding window, on the kill test", 45],
+  ["selector", "Practical selector", "Cheap stand-ins for the oracle: page-level key bounds (Quest-style) and low-rank key sketch. How close to oracle?", 45],
+  ["offload", "Offload + bandwidth model", "Measure host↔GPU fetch on this box (x16 vs x4), project tok/s and capacity for the 27B", 30],
+  ["verdict", "Design + verdict", "What to build into HyperQwen, expected agents/context per card, risks", 20]
+ ]}

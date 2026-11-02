@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TokenGate Lab · dual 3090</title>
+<style>
+:root{
+  --bg:#0b0e14; --panel:#121722; --panel2:#171d2b; --line:#232b3d; --ink:#e6eaf2; --ink2:#a9b2c6; --mute:#6b7690;
+  --run:#38bdf8; --done:#34d399; --fail:#f87171; --skip:#a78bfa; --pend:#4b5568; --warn:#fbbf24; --find:#f472b6;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:22px 20px 40px}
+header{display:flex;gap:22px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:.2px}
+.goal{color:var(--ink2)}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink2);margin-top:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--done);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 1.8s infinite}
+.dot.stale{background:var(--warn);animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}70%{box-shadow:0 0 0 8px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.ring{position:relative;width:118px;height:118px;flex:none}
+.ring svg{transform:rotate(-90deg)}
+.ring .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .pct{font-size:26px;font-weight:700}
+.ring .lbl{font-size:11px;color:var(--ink2)}
+.kpis{display:flex;gap:10px;flex-basis:100%;width:100%;flex-wrap:nowrap;align-items:stretch}
+.kpis .kpi{flex:1 1 0;min-width:0}
+header > div:not(.kpis):not(.ring){flex:1 1 300px;min-width:0}
+header > .ring{flex:none}
+.kpis .kpi.etak{flex:1 1 0}
+.kpis .kpi{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.kpis .kpi .etachart{align-self:stretch}
+.etachart svg{width:100%!important}
+@media(max-width:700px){.kpis{flex-wrap:wrap}.kpis .kpi{flex:1 1 40%}.kpis .kpi.etak{flex-basis:100%}}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
+.kpi .k{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.6px}
+.kpi .v{font-size:32px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:1.55fr 1fr;gap:16px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}header{flex-wrap:wrap}.kpis{margin-left:0}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+.panel h2{font-size:13px;margin:0 0 10px;color:var(--ink2);text-transform:uppercase;letter-spacing:.7px;display:flex;justify-content:space-between}
+.phase{position:relative;background:var(--panel2);border:1px solid var(--line);border-left:4px solid var(--pend);border-radius:10px;padding:11px 13px;margin-bottom:9px;transition:border-color .4s, transform .4s}
+.phase.running{border-left-color:var(--run);box-shadow:inset 0 0 0 1px rgba(56,189,248,.18)}
+.phase.done{border-left-color:var(--done)} .phase.failed{border-left-color:var(--fail)} .phase.skipped{border-left-color:var(--skip);opacity:.75}
+.prow{display:flex;align-items:center;gap:10px}
+.num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:var(--line);color:var(--ink2);flex:none}
+.running .num{background:var(--run);color:#06202e} .done .num{background:var(--done);color:#05261a} .failed .num{background:var(--fail);color:#2a0707} .skipped .num{background:var(--skip);color:#1b0f33}
+.pname{font-weight:650;font-size:15px}
+.chip{margin-left:auto;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.4px;white-space:nowrap}
+.chip.pending{background:#1f2533;color:var(--ink2)} .chip.running{background:rgba(56,189,248,.15);color:var(--run)}
+.chip.done{background:rgba(52,211,153,.14);color:var(--done)} .chip.failed{background:rgba(248,113,113,.15);color:var(--fail)} .chip.skipped{background:rgba(167,139,250,.15);color:var(--skip)}
+.pdesc{color:var(--ink2);font-size:12.5px;margin:5px 0 8px 34px}
+.bar{height:9px;background:#0d111a;border-radius:6px;overflow:hidden;margin-left:34px;position:relative}
+.fill{height:100%;width:0;border-radius:6px;background:var(--pend);transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.running .fill{background:linear-gradient(90deg,#0ea5e9,#38bdf8,#7dd3fc,#38bdf8,#0ea5e9);background-size:200% 100%;animation:flow 2.2s linear infinite}
+.done .fill{background:var(--done)} .failed .fill{background:var(--fail)} .skipped .fill{background:var(--skip)}
+@keyframes flow{from{background-position:200% 0}to{background-position:0 0}}
+.meta{display:flex;gap:16px;margin:6px 0 0 34px;font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;flex-wrap:wrap}
+.meta b{color:var(--ink2);font-weight:600}
+.note{margin:6px 0 0 34px;font-size:12.5px;color:var(--ink)}
+.gpu{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:9px}
+.gtop{display:flex;justify-content:space-between;align-items:baseline}
+.gname{font-weight:650} .grole{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.role-lab{background:rgba(244,114,182,.15);color:var(--find)} .role-serve{background:rgba(52,211,153,.14);color:var(--done)}
+.gm{display:grid;grid-template-columns:62px 1fr 64px;gap:6px 8px;align-items:center;margin-top:8px;font-size:12px;color:var(--ink2)}
+.mini{height:6px;background:#0d111a;border-radius:4px;overflow:hidden}
+.mini i{display:block;height:100%;border-radius:4px;transition:width .9s ease}
+.gm .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.finds{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.fc{background:var(--panel2);border:1px solid var(--line);border-top:3px solid var(--run);border-radius:10px;padding:9px 11px}
+.fc.new{animation:pop .5s ease}
+.fc.good{border-top-color:var(--done)} .fc.bad{border-top-color:var(--fail)} .fc.info{border-top-color:var(--run)}
+.fc .ft{font-size:11.5px;color:var(--ink2)} .fc .fv{font-size:16px;font-weight:700;margin-top:3px}
+.fc .fi{font-size:11px;font-weight:700;margin-top:3px} .fc.good .fi{color:var(--done)} .fc.bad .fi{color:var(--fail)} .fc.info .fi{color:var(--run)}
+@keyframes pop{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+.empty{color:var(--mute);font-size:12.5px}
+.log{max-height:330px;overflow:auto;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+.ll{display:flex;gap:9px;padding:3px 0;border-bottom:1px dashed #1c2333}
+.ll.new{animation:slide .45s ease}
+.ll .ts{color:var(--mute);flex:none} .ll.done .tx{color:var(--done)} .ll.fail .tx{color:var(--fail)} .ll.start .tx{color:var(--run)} .ll.find .tx{color:var(--find)} .ll.skip .tx{color:var(--skip)}
+@keyframes slide{from{transform:translateX(-6px);opacity:0}to{transform:none;opacity:1}}
+.verdict{display:none;margin-bottom:16px;border-radius:12px;padding:14px 16px;background:linear-gradient(90deg,rgba(52,211,153,.12),rgba(56,189,248,.08));border:1px solid rgba(52,211,153,.35);font-size:15px}
+.verdict b{color:var(--done)}
+.legend{display:flex;gap:12px;font-size:11.5px;color:var(--ink2);margin:-4px 0 10px;flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+.kpi.etak{min-width:240px}
+.etachart{position:relative;margin-top:6px}
+.etachart svg{display:block;width:220px;height:56px;overflow:visible}
+.etachart .ax{font-size:9.5px;fill:var(--mute)}
+.etatip{position:absolute;pointer-events:none;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:4px 7px;font-size:11px;color:var(--ink);white-space:nowrap;transform:translate(-50%,-110%);display:none;z-index:5}
+.etatip b{color:var(--ink)} .etatip span{color:var(--ink2)}
+.sprint{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.sprint .sh{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.sprint .st{font-size:15px;font-weight:700}
+.sprint .sm{font-size:12px;color:var(--ink2);font-variant-numeric:tabular-nums;display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}
+.sprint .sm b{color:var(--ink)}
+.sbar{position:relative;height:12px;background:var(--panel2);border:1px solid var(--line);border-radius:7px;margin:10px 0 4px;overflow:hidden}
+.sbar .sf{position:absolute;left:0;top:0;bottom:0;background:var(--run);border-radius:6px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.sbar .tm{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--warn)}
+.slegend{font-size:11px;color:var(--mute);display:flex;gap:14px;margin-bottom:10px}
+.slegend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.mgrid{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));grid-auto-rows:1fr;gap:10px}
+@media(max-width:980px){.mgrid{--cols:2 !important}} @media(max-width:520px){.mgrid{--cols:1 !important}}
+.ms{position:relative;display:flex;flex-direction:column;min-height:148px;background:var(--panel2);border:1px solid var(--line);border-top:3px solid var(--pend);border-radius:9px;padding:10px 12px 11px;cursor:pointer;outline:none;transition:border-color .15s,background .15s}
+.ms:hover,.ms:focus-visible,.ms.open{background:#1b2232;border-color:#33405a}
+.ms.running{border-top-color:var(--run)} .ms.done{border-top-color:var(--done)} .ms.failed{border-top-color:var(--fail)}
+.ms.r-partial{border-top-color:var(--warn)} .ms.r-bad{border-top-color:var(--fail)} .ms.r-neutral{border-top-color:#8b95ab}
+.ms .mn{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.ms .mnm{font-size:13px;font-weight:650;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-width:0}
+.ms .mst{font-size:10px;font-weight:700;letter-spacing:.4px;white-space:nowrap;padding:2px 7px;border-radius:999px;background:rgba(107,118,144,.18);color:var(--ink2);flex:none;margin-top:1px}
+.ms.running .mst{color:var(--run);background:rgba(56,189,248,.12)} .ms.done .mst{color:var(--done);background:rgba(52,211,153,.12)} .ms.failed .mst{color:var(--fail);background:rgba(248,113,113,.12)}
+.ms .md{font-size:11.5px;color:var(--ink2);margin:4px 0 0;line-height:1.38;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ms .mbody{margin-top:auto;padding-top:10px}
+.ms .mrow{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:11.5px;color:var(--ink2);font-variant-numeric:tabular-nums;margin-bottom:5px;min-width:0}
+.ms .mrow b{font-size:15px;color:var(--ink);font-weight:700}
+.ms .mrow .eta{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.ms.running .mrow .eta{color:var(--run)} .ms .mrow .eta.over{color:var(--warn)}
+.ms .mb{height:6px;background:var(--bg);border-radius:4px;overflow:hidden}
+.ms .mb div{height:100%;background:var(--pend);border-radius:4px;transition:width 1.2s}
+.ms.running .mb div{background:var(--run)}
+.ms .mwait{font-size:11px;color:var(--mute);margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ms .mout{border-radius:7px;padding:8px 9px;background:rgba(52,211,153,.09);border:1px solid rgba(52,211,153,.28)}
+.ms .mout .oi{font-size:14px;line-height:1;font-weight:800;color:var(--done);margin-right:6px;vertical-align:-1px}
+.ms .mout .ol{font-size:10.5px;font-weight:800;letter-spacing:.6px;color:var(--done);text-transform:uppercase}
+.ms .mout .ot{font-size:12px;line-height:1.36;color:var(--ink);font-weight:550;margin-top:4px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.ms.r-partial .mout{background:rgba(251,191,36,.09);border-color:rgba(251,191,36,.3)} .ms.r-partial .oi,.ms.r-partial .ol{color:var(--warn)}
+.ms.r-bad .mout{background:rgba(248,113,113,.09);border-color:rgba(248,113,113,.3)} .ms.r-bad .oi,.ms.r-bad .ol{color:var(--fail)}
+.ms.r-neutral .mout{background:rgba(139,149,171,.09);border-color:rgba(139,149,171,.3)} .ms.r-neutral .oi,.ms.r-neutral .ol{color:#aab3c5}
+.ms .mwhen{font-size:10.5px;color:var(--mute);margin-top:5px;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mspop{position:fixed;z-index:50;display:none;width:min(380px,calc(100vw - 24px));max-height:min(70vh,560px);overflow:auto;background:#141a27;border:1px solid #33405a;border-radius:11px;padding:14px 16px 14px;box-shadow:0 10px 30px rgba(0,0,0,.45);font-size:12.5px;color:var(--ink)}
+.mspop.show{display:block}
+.mspop .ph{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.mspop .pt{font-size:15px;font-weight:700;line-height:1.3}
+.mspop .px{display:none;background:none;border:1px solid var(--line);color:var(--ink2);border-radius:6px;font-size:13px;line-height:1;padding:4px 8px;cursor:pointer;flex:none}
+.mspop.pinned .px{display:block}
+.mspop .pst{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;margin-top:5px;padding:2px 8px;border-radius:999px;background:rgba(107,118,144,.18);color:var(--ink2)}
+.mspop .pd{color:var(--ink2);margin-top:8px;line-height:1.45}
+.mspop .po{margin-top:10px;padding:9px 10px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);font-weight:600;line-height:1.4}
+.mspop .sec{font-size:10px;font-weight:700;letter-spacing:.7px;color:var(--mute);text-transform:uppercase;margin:12px 0 4px}
+.mspop .pdet{white-space:pre-line;line-height:1.5}
+.mspop dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;margin:4px 0 0;font-variant-numeric:tabular-nums}
+.mspop dt{color:var(--mute)} .mspop dd{margin:0;color:var(--ink)}
+.mspop .hint{font-size:10.5px;color:var(--mute);margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="ring">
+      <svg width="118" height="118"><circle cx="59" cy="59" r="50" stroke="#1c2333" stroke-width="10" fill="none"/>
+        <circle id="ringArc" cx="59" cy="59" r="50" stroke="url(#rg)" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" style="transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)"/>
+        <defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs></svg>
+      <div class="c"><div class="pct" id="oPct">0%</div><div class="lbl">overall</div></div>
+    </div>
+    <div>
+      <h1 id="title">TokenGate Lab</h1>
+      <div class="goal" id="goal"></div>
+      <div style="margin-top:6px"><a href="report.html" style="color:#38bdf8;font-weight:600">📄 Read the findings report →</a></div>
+      <div class="live"><span class="dot" id="dot"></span><span id="liveTxt">connecting…</span></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="k">Phase</div><div class="v" id="kPhase">–</div></div>
+      <div class="kpi"><div class="k">Elapsed</div><div class="v" id="kEl">–</div></div>
+      <div class="kpi etak"><div class="k">ETA (all) · history</div><div class="v" id="kEta">–</div>
+        <div class="etachart" id="etaChart" aria-label="How the overall ETA has changed over time"><svg id="etaSvg" viewBox="0 0 220 56"></svg><div class="etatip" id="etaTip"></div></div></div>
+      <div class="kpi"><div class="k">Finish ≈</div><div class="v" id="kFin">–</div></div>
+    </div>
+  </header>
+
+  <div class="sprint" id="sprint" style="display:none">
+    <div class="sh"><span class="st" id="spTitle"></span>
+      <span class="sm"><span><b id="spPct">–</b> done</span><span>time used <b id="spUsed">–</b></span><span>deadline in <b id="spLeft">–</b></span><span>projected finish <b id="spEta">–</b></span></span></div>
+    <div class="sbar" aria-label="Sprint progress"><div class="sf" id="spFill"></div><div class="tm" id="spTime" title="time elapsed"></div></div>
+    <div class="slegend"><span><i style="background:var(--run)"></i>milestones done (weighted)</span><span><i style="background:var(--warn)"></i><span id="spSpanLbl">time elapsed of window</span></span></div>
+    <div class="mgrid" id="spGrid" role="list"></div>
+  </div>
+  <div class="verdict" id="verdict"></div>
+  <div class="mspop" id="msPop" role="dialog" aria-live="polite"></div>
+
+  <div class="grid">
+    <div>
+      <div class="panel">
+        <h2><span>Phases</span><span id="phCount"></span></h2>
+        <div class="legend"><span style="--c:var(--run)">▶ running</span><span style="--c:var(--done)">✔ done</span><span style="--c:var(--fail)">✖ failed / stopped</span><span style="--c:var(--skip)">⤼ skipped</span><span style="--c:var(--pend)">○ waiting</span></div>
+        <div id="phases"></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel" style="margin-bottom:16px">
+        <h2><span>GPUs (live)</span><span id="gpuAge"></span></h2>
+        <div id="gpus" class="empty">waiting for data…</div>
+      </div>
+      <div class="panel" style="margin-bottom:16px">
+        <h2><span>Findings</span></h2>
+        <div id="finds" class="finds"><div class="empty">Results land here as each phase reports.</div></div>
+      </div>
+      <div class="panel">
+        <h2><span>Live log</span></h2>
+        <div id="log" class="log"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const ICON = {pending:"○ WAITING", running:"▶ RUNNING", done:"✔ DONE", failed:"✖ STOPPED", skipped:"⤼ SKIPPED"};
+let S = null, G = null, lastFetch = 0;
+const renderState = {fsig:null, fseen:new Set(), logT:null, logN:0, psig:null, gsig:null};
+const setText = (el, t) => { if (el.textContent !== t) el.textContent = t; };
+const fmt = s => { if (s == null || !isFinite(s)) return "–"; s = Math.max(0, Math.round(s));
+  const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60;
+  if (h >= 24) return `${Math.floor(h/24)}d ${h%24}h`;
+  return h ? `${h}h ${String(m).padStart(2,"0")}m` : m ? `${m}m ${String(x).padStart(2,"0")}s` : `${x}s`; };
+const clock = t => new Date(t*1000).toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
+const esc = t => String(t).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+function phaseEta(p, now){              // seconds remaining for one phase
+  const est = p.est_min*60;
+  if (p.status === "done" || p.status === "failed" || p.status === "skipped") return 0;
+  if (p.status === "pending") return est;
+  const el = now - p.started, f = Math.min(p.pct, 99.5)/100;
+  const byEst = Math.max(est - el, est*0.08*(1-f));
+  if (f < 0.05) return byEst;
+  const byRate = el*(1-f)/f, w = Math.min(1, f*1.6);   // trust measured rate more as the phase advances
+  return w*byRate + (1-w)*byEst;
+}
+function renderSprint(now){
+  const sp = S && S.sprint, box = $("sprint"); if (!sp){ box.style.display="none"; return; }
+  box.style.display = "block";
+  const ms = sp.milestones, f = ms.reduce((a,m)=>a+(m.status==="done"?100:m.pct),0)/(ms.length*100);
+  const used = now - sp.start, span = sp.deadline - sp.start, allDone = ms.every(m=>m.status==="done");
+  setText($("spTitle"), sp.title);
+  setText($("spPct"), Math.round(f*100)+"%");
+  setText($("spUsed"), fmt(Math.min(used, span)) + " of " + fmt(span));
+  setText($("spLeft"), now < sp.deadline ? fmt(sp.deadline-now) : "passed");
+  let eta;
+  if (allDone) eta = "done";
+  else if (f < 0.2 || used < Math.min(3600, span/4)) eta = "shown once " + fmt(Math.min(3600, span/4)) + " in";
+  else { const rem = used*(1-f)/f; eta = (rem > 20*3600 ? new Date((now+rem)*1000).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"}) : clock(now+rem)) + (now+rem <= sp.deadline ? " ✔ on time" : " ⚠ late"); }
+  setText($("spEta"), eta);
+  $("spFill").style.width = (f*100).toFixed(1)+"%";
+  $("spTime").style.left = Math.min(100, used/span*100).toFixed(2)+"%";
+  renderMsGrid(ms, now);
+}
+// ---- milestone cards -------------------------------------------------------
+const MS_LBL = {running:"▶ RUNNING", done:"✔ DONE", failed:"✖ STOPPED", pending:"○ WAITING"};
+const MS_RES = {good:["✓","Success"], partial:["◐","Partial"], bad:["✗","Failed"], neutral:["–","No change"]};
+const msRes = m => m.result && MS_RES[m.result] ? m.result : (m.status==="failed" ? "bad" : "neutral");
+const fmtMin = s => { s = Math.max(0, s); const m = Math.round(s/60);
+  return m < 1 ? "<1 min" : m < 60 ? m+" min" : Math.floor(m/60)+"h "+String(m%60).padStart(2,"0")+"m"; };
+function msEta(m, now){                 // {rem, over} seconds remaining for a running milestone, or null
+  if (m.status !== "running" || !m.started) return null;
+  const el = now - m.started, pct = Math.min(m.pct||0, 99.5), est = m.eta_min ? m.eta_min*60 : null;
+  const byRate = pct >= 10 ? el*(100-pct)/pct : null;
+  let rem;
+  if (byRate != null && est != null){ const w = Math.min(1, pct/70); rem = w*byRate + (1-w)*(est-el); }
+  else if (byRate != null) rem = byRate;
+  else if (est != null) rem = est - el;
+  else return null;
+  if (rem <= 0) return {rem:0, over: est != null ? el-est : 0};
+  return {rem, over:0};
+}
+function msWhen(m, now){                // short timing line for the card
+  if (m.status === "done" || m.status === "failed"){
+    const d = m.ended && m.started ? m.ended - m.started : null;
+    return (m.status==="done"?"done ":"stopped ") + (m.ended ? clock(m.ended) : "") + (d!=null ? " · took "+fmtMin(d) : "");
+  }
+  return "";
+}
+function msCard(m, now){                // [className, body html]
+  const st = MS_LBL[m.status] ? m.status : "pending";
+  if (st === "done" || st === "failed"){
+    const r = msRes(m), [ic, lb] = MS_RES[r], txt = m.outcome || m.note || (st==="done" ? "Done" : "Stopped");
+    return ["ms "+st+" r-"+r, `<div class="mout" role="status" aria-label="Result: ${lb}"><div class="ol"><span class="oi" aria-hidden="true">${ic}</span>${lb}</div><div class="ot">${esc(txt)}</div></div><div class="mwhen">${esc(msWhen(m,now))}</div>`];
+  }
+  if (st === "running"){
+    const e = msEta(m, now); let eta = "estimating…", over = false;
+    if (e){ if (e.rem > 0) eta = "~"+fmtMin(e.rem)+" left · ≈"+clock(now+e.rem); else { over = true; eta = e.over > 60 ? "over est. by "+fmtMin(e.over) : "finishing…"; } }
+    return ["ms running", `<div class="mrow"><b>${Math.round(m.pct||0)}%</b><span class="eta${over?" over":""}">${esc(eta)}</span></div><div class="mb"><div style="width:${Math.max(2,m.pct||0)}%"></div></div>`];
+  }
+  return ["ms pending", `<div class="mrow"><b style="color:var(--mute)">waiting</b><span class="eta">${m.eta_min?"est "+fmtMin(m.eta_min*60):""}</span></div><div class="mb"><div style="width:0"></div></div><div class="mwait">${m.waits_on?"needs: "+esc(m.waits_on):"&nbsp;"}</div>`];
+}
+function renderMsGrid(ms, now){
+  const g = $("spGrid"), n = ms.length;
+  const cols = n <= 5 ? n : Math.ceil(n/Math.ceil(n/5));   // balanced rows (8 -> 4+4), max 5 across
+  if (g.style.getPropertyValue("--cols") !== String(cols)) g.style.setProperty("--cols", cols);
+  const sig = ms.map(m=>m.id).join(",");
+  if (g.dataset.sig !== sig){
+    g.innerHTML = ms.map(m=>`<div class="ms" role="listitem" tabindex="0" data-id="${esc(m.id)}" aria-haspopup="dialog"><div class="mn"><span class="mnm"></span><span class="mst"></span></div><div class="md"></div><div class="mbody"></div></div>`).join("");
+    g.dataset.sig = sig;
+  }
+  ms.forEach((m,i)=>{ const el = g.children[i], q = s=>el.querySelector(s), [cls, body] = msCard(m, now);
+    const c = cls + (POP.id === m.id ? " open" : ""); if (el.className !== c) el.className = c;
+    setText(q(".mnm"), m.name); setText(q(".mst"), MS_LBL[m.status] || MS_LBL.pending); setText(q(".md"), m.desc||"");
+    if (el.dataset.body !== body){ q(".mbody").innerHTML = body; el.dataset.body = body; }
+    el.title = ""; });
+  if (POP.id) fillPop(now);
+}
+// ---- detail popover: hover on mouse, click/tap/Enter pins it ---------------
+const POP = {id:null, pinned:false, anchor:null, hideT:null};
+function msById(id){ return S && S.sprint && S.sprint.milestones.find(m=>m.id===id); }
+function fillPop(now){
+  const m = msById(POP.id), p = $("msPop"); if (!m){ hidePop(true); return; }
+  const st = MS_LBL[m.status] ? m.status : "pending", fin = st==="done"||st==="failed";
+  const row = (k,v) => v==null||v==="" ? "" : `<dt>${k}</dt><dd>${esc(v)}</dd>`, ts = t => t ? new Date(t*1000).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}) : null;
+  const e = msEta(m, now), dur = m.started ? ((m.ended && fin ? m.ended : now) - m.started) : null;
+  let head = "";
+  if (fin){ const [ic, lb] = MS_RES[msRes(m)]; head = `<div class="po" style="border-color:${{good:"rgba(52,211,153,.4)",partial:"rgba(251,191,36,.4)",bad:"rgba(248,113,113,.4)",neutral:"rgba(139,149,171,.4)"}[msRes(m)]}">${ic} ${lb}: ${esc(m.outcome||m.note||"")}</div>`; }
+  const html = `<div class="ph"><div><div class="pt">${esc(m.name)}</div><span class="pst">${MS_LBL[st]}${st==="running"?" · "+Math.round(m.pct||0)+"%":""}</span></div><button class="px" aria-label="Close" onclick="hidePop(true)">✕</button></div>
+    <div class="pd">${esc(m.desc||"")}</div>${head}
+    ${m.detail ? `<div class="sec">Detail</div><div class="pdet">${esc(m.detail)}</div>` : ""}
+    ${m.note && m.note !== m.detail ? `<div class="sec">Latest note</div><div class="pdet">${esc(m.note)}</div>` : ""}
+    <div class="sec">Numbers</div><dl>
+      ${row("Progress", Math.round(fin&&st==="done"?100:(m.pct||0))+"%")}
+      ${row("Estimate", m.eta_min ? fmtMin(m.eta_min*60) : null)}
+      ${row("Time left", st==="running" && e ? (e.rem>0 ? "~"+fmtMin(e.rem)+" (≈"+clock(now+e.rem)+")" : (e.over>60?"over estimate by "+fmtMin(e.over):"finishing")) : null)}
+      ${row("Waits on", st==="pending" ? (m.waits_on||"earlier steps") : null)}
+      ${row("Started", ts(m.started))}
+      ${row("Ended", fin ? ts(m.ended) : null)}
+      ${row(fin?"Duration":"Elapsed", dur!=null ? fmtMin(dur) : null)}
+    </dl>
+    <div class="hint">${POP.pinned ? "Esc or ✕ to close" : "Click to pin"}</div>`;
+  if (p.dataset.html !== html){ p.innerHTML = html; p.dataset.html = html; }
+}
+function placePop(){
+  const p = $("msPop"), a = POP.anchor; if (!a) return;
+  const r = a.getBoundingClientRect(), pw = p.offsetWidth, ph = p.offsetHeight, vw = innerWidth, vh = innerHeight, pad = 12;
+  let left = Math.min(Math.max(pad, r.left + r.width/2 - pw/2), vw - pw - pad);
+  let top = r.bottom + 8; if (top + ph > vh - pad) top = r.top - ph - 8; if (top < pad) top = Math.max(pad, (vh - ph)/2);
+  p.style.left = left+"px"; p.style.top = top+"px";
+}
+function showPop(card, pinned){
+  clearTimeout(POP.hideT);
+  const prev = POP.id; POP.id = card.dataset.id; POP.anchor = card; POP.pinned = pinned || (POP.pinned && prev === POP.id);
+  document.querySelectorAll(".ms.open").forEach(c=>c.classList.remove("open")); card.classList.add("open");
+  const p = $("msPop"); p.classList.toggle("pinned", POP.pinned); p.setAttribute("aria-modal", POP.pinned ? "true" : "false");
+  fillPop(Date.now()/1000); p.classList.add("show"); placePop();
+}
+function hidePop(force){
+  if (POP.pinned && !force) return;
+  POP.id = null; POP.pinned = false; POP.anchor = null; $("msPop").classList.remove("show","pinned");
+  document.querySelectorAll(".ms.open").forEach(c=>c.classList.remove("open"));
+}
+(function(){
+  const g = $("spGrid"), p = $("msPop"), fine = matchMedia("(hover:hover) and (pointer:fine)").matches;
+  if (fine){
+    g.addEventListener("mouseover", e=>{ const c = e.target.closest(".ms"); if (c && !POP.pinned && POP.id !== c.dataset.id) showPop(c, false); else clearTimeout(POP.hideT); });
+    g.addEventListener("mouseleave", ()=>{ POP.hideT = setTimeout(()=>hidePop(false), 180); });
+    p.addEventListener("mouseenter", ()=>clearTimeout(POP.hideT));
+    p.addEventListener("mouseleave", ()=>{ POP.hideT = setTimeout(()=>hidePop(false), 180); });
+  }
+  g.addEventListener("click", e=>{ const c = e.target.closest(".ms"); if (!c) return; e.stopPropagation();
+    if (POP.pinned && POP.id === c.dataset.id) hidePop(true); else showPop(c, true); });
+  g.addEventListener("keydown", e=>{ const c = e.target.closest(".ms"); if (c && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); showPop(c, true); } });
+  document.addEventListener("keydown", e=>{ if (e.key==="Escape") hidePop(true); });
+  document.addEventListener("click", e=>{ if (POP.pinned && !p.contains(e.target)) hidePop(true); });
+  addEventListener("scroll", ()=>{ if (POP.id) placePop(); }, {passive:true}); addEventListener("resize", ()=>{ if (POP.id) placePop(); });
+})();
+function render(){
+  if (!S) return;
+  const now = Date.now()/1000, ph = S.phases;
+  $("title").textContent = S.title; $("goal").textContent = S.goal;
+  const tot = ph.reduce((a,p)=>a+p.est_min,0);
+  const doneW = ph.reduce((a,p)=>a + p.est_min*(["done","skipped","failed"].includes(p.status)?1:p.pct/100),0);
+  const pct = Math.round(100*doneW/tot);
+  $("oPct").textContent = pct+"%"; $("ringArc").style.strokeDashoffset = 314.16*(1-pct/100);
+  const stopped = ph.some(p=>p.status==="failed");
+  const eta = stopped ? 0 : ph.reduce((a,p)=>a+phaseEta(p,now),0);
+  const run = ph.find(p=>p.status==="running");
+  const idx = run ? ph.indexOf(run)+1 : ph.filter(p=>p.status!=="pending").length;
+  $("kPhase").textContent = `${idx} / ${ph.length}`;
+  const first = ph.map(p=>p.started).filter(Boolean).sort()[0];
+  const allEnded = ph.every(p=>p.status!=="pending" && p.status!=="running");
+  const endT = allEnded ? Math.max(...ph.map(p=>p.ended||0)) : now;
+  $("kEl").textContent = first ? fmt(endT-first) : "not started";
+  $("kEta").textContent = allEnded||stopped ? "—" : fmt(eta);
+  $("kFin").textContent = allEnded||stopped ? (stopped?"stopped":"done") : (eta > 20*3600 ? new Date((now+eta)*1000).toLocaleString([], {weekday:"short", hour:"numeric", minute:"2-digit"}) : clock(now+eta));
+  $("phCount").textContent = `${ph.filter(p=>p.status==="done").length} done · ${ph.length} total`;
+  // phases: build the cards once (or when the phase list changes), then update text/width in place
+  const psig = ph.map(p=>p.id).join(",");
+  if (psig !== renderState.psig){
+    $("phases").innerHTML = ph.map((p,i)=>`<div class="phase" id="ph-${p.id}"><div class="prow"><div class="num">${i+1}</div><div class="pname"></div><div class="chip"></div></div>
+      <div class="pdesc"></div><div class="bar"><div class="fill"></div></div><div class="meta"></div><div class="note"></div></div>`).join("");
+    renderState.psig = psig;
+  }
+  ph.forEach((p,i)=>{
+    const card = $("ph-"+p.id), q = sel => card.querySelector(sel);
+    const el = p.started ? ((p.ended||now) - p.started) : null, pe = phaseEta(p,now);
+    if (card.dataset.st !== p.status){ card.className = "phase "+p.status; q(".chip").className = "chip "+p.status; q(".chip").textContent = ICON[p.status]; card.dataset.st = p.status; }
+    setText(q(".pname"), p.name); setText(q(".pdesc"), p.desc);
+    const w = (p.status==="pending"?0:Math.max(p.pct,2))+"%"; if (q(".fill").style.width !== w) q(".fill").style.width = w;
+    const meta = `<span><b>${Math.round(p.pct)}%</b></span><span>est <b>${fmt(p.est_min*60)}</b></span>`
+      + (el!=null?`<span>elapsed <b>${fmt(el)}</b></span>`:"")
+      + (p.status==="running"?`<span>ETA <b>${fmt(pe)}</b></span>`:"")
+      + (p.status==="pending"?`<span>starts in ≈ <b>${fmt(ph.slice(0,i).reduce((a,q)=>a+phaseEta(q,now),0))}</b></span>`:"");
+    if (q(".meta").innerHTML !== meta) q(".meta").innerHTML = meta;
+    setText(q(".note"), p.note||""); q(".note").style.display = p.note ? "" : "none";
+  });
+  renderSprint(now);
+  const v = $("verdict"); if (S.verdict){ v.style.display="block"; v.innerHTML = "<b>VERDICT</b> · "+esc(S.verdict); } else v.style.display="none";
+  // findings + log: only touch the DOM when content changed, and only animate NEW items
+  const fsig = JSON.stringify(S.findings);
+  if (fsig !== renderState.fsig){
+    const seen = renderState.fseen;
+    $("finds").innerHTML = S.findings.length ? S.findings.map(f=>{
+      const key = f.title+"|"+f.value, isNew = renderState.fsig !== null && !seen.has(key); seen.add(key);
+      return `<div class="fc ${f.kind}${isNew?" new":""}"><div class="ft">${esc(f.title)}</div><div class="fv">${esc(f.value)}</div><div class="fi">${f.kind==="good"?"✔ good":f.kind==="bad"?"✖ problem":"ℹ info"}</div></div>`;}).join("") : `<div class="empty">Results land here as each phase reports.</div>`;
+    renderState.fsig = fsig;
+  }
+  const lastT = S.log.length ? S.log[S.log.length-1].t : 0;
+  if (lastT !== renderState.logT || S.log.length !== renderState.logN){
+    const lg = $("log"), atTop = lg.scrollTop < 10, prevT = renderState.logT;
+    lg.innerHTML = S.log.slice().reverse().map(l=>`<div class="ll ${l.kind}${prevT!==null && l.t>prevT?" new":""}"><span class="ts">${new Date(l.t*1000).toLocaleTimeString()}</span><span class="tx">${esc(l.text)}</span></div>`).join("");
+    if (atTop) lg.scrollTop = 0;
+    renderState.logT = lastT; renderState.logN = S.log.length;
+  }
+  const age = now - lastFetch; $("dot").className = "dot"+(age>10?" stale":"");
+  $("liveTxt").textContent = age>10 ? `connection stale (${fmt(age)})` : `live · updated ${fmt(now - S.updated)} ago`;
+  renderGpu(now);
+}
+function bar(v, max, col){ const w = v==null?0:Math.min(100, 100*v/max); return `<div class="mini"><i style="width:${w}%;background:${col}"></i></div>`; }
+function tcol(t){ return t==null?"#4b5568": t>=85?"var(--fail)": t>=75?"var(--warn)":"var(--done)"; }
+function renderGpu(now){
+  if (!G || !G.gpus) return;
+  setText($("gpuAge"), (now-G.t)<15 ? "live" : `stale ${fmt(now-G.t)}`);
+  if (renderState.gsig === G.t) return; renderState.gsig = G.t;
+  $("gpus").className = "";
+  $("gpus").innerHTML = G.gpus.map(g=>{
+    const lab = g.name==="RTX 3090";
+    return `<div class="gpu"><div class="gtop"><span class="gname">${esc(g.name)}</span><span class="grole ${lab?"role-lab":"role-serve"}">${lab?"🧪 LAB CARD":(S&&S.sprint?"🧪 BUILD TESTS":"● SERVING")}</span></div>
+    <div class="gm"><span>Temp</span>${bar(g.temp,95,tcol(g.temp))}<span class="val">${g.temp??"–"} °C</span>
+    <span>Load</span>${bar(g.util,100,"var(--run)")}<span class="val">${g.util??"–"} %</span>
+    <span>Power</span>${bar(g.power,g.plimit||250,"var(--skip)")}<span class="val">${g.power!=null?Math.round(g.power):"–"} W</span>
+    <span>VRAM</span>${bar(g.mem,g.memtot||24576,"var(--find)")}<span class="val">${g.mem!=null?(g.mem/1024).toFixed(1):"–"} GB</span>
+    <span>Fan</span>${bar(g.fan,100,"#94a3b8")}<span class="val">${g.fan??"–"} %</span></div></div>`;}).join("");
+}
+async function poll(){
+  try{ const r = await fetch("state.json?"+Date.now(), {cache:"no-store"}); if (r.ok){ S = await r.json(); lastFetch = Date.now()/1000; } }catch(e){}
+  try{ const r = await fetch("gpu.json?"+Date.now(), {cache:"no-store"}); if (r.ok) G = await r.json(); }catch(e){}
+  render();
+}
+let EH = null;
+async function pollEta(){ try{ const r = await fetch("eta.json?"+Date.now(), {cache:"no-store"}); if (r.ok){ EH = await r.json(); drawEta(); } }catch(e){} }
+function drawEta(){
+  const svg = $("etaSvg"); if (!EH || !svg) return;
+  const pts = EH.points || [];
+  if (pts.length < 2){ svg.innerHTML = `<text class="ax" x="0" y="28">collecting history…</text>`; return; }
+  const W = Math.max(160, Math.round(svg.clientWidth || 220)), H = 56, top = 14, bot = 44; svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const t0 = pts[0][0], t1 = pts[pts.length-1][0], tr = Math.max(1, t1 - t0);
+  const ymax = Math.max(...pts.map(p=>p[1])) * 1.05 || 1;
+  const X = t => (t - t0) / tr * W, Y = e => bot - (e / ymax) * (bot - top);
+  const d = pts.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1)).join("");
+  const last = pts[pts.length-1];
+  svg.innerHTML = `<line x1="0" x2="${W}" y1="${bot}" y2="${bot}" stroke="var(--line)" stroke-width="1"/>`
+    + `<path d="${d}" fill="none" stroke="var(--run)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`
+    + `<circle cx="${X(last[0])}" cy="${Y(last[1])}" r="4" fill="var(--run)" stroke="var(--panel)" stroke-width="2"/>`
+    + `<line id="etaX" x1="0" x2="0" y1="${top}" y2="${bot}" stroke="var(--ink2)" stroke-width="1" style="display:none"/>`
+    + `<text class="ax" x="0" y="55">${clock(t0)}</text><text class="ax" x="${W}" y="55" text-anchor="end">now</text>`
+    + `<text class="ax" x="${W}" y="9" text-anchor="end">peak ${fmt(ymax/1.05)}</text>`
+    + `<rect x="0" y="0" width="${W}" height="${H}" fill="transparent" id="etaHit"/>`;
+  const hit = $("etaHit"), tip = $("etaTip"), xl = $("etaX");
+  hit.onmousemove = ev => {
+    const r = svg.getBoundingClientRect(), fx = (ev.clientX - r.left) / r.width, tt = t0 + fx * tr;
+    let best = pts[0]; for (const p of pts) if (Math.abs(p[0]-tt) < Math.abs(best[0]-tt)) best = p;
+    const x = X(best[0]); xl.setAttribute("x1", x); xl.setAttribute("x2", x); xl.style.display = "";
+    tip.innerHTML = `<span>${clock(best[0])}</span> · ETA <b>${fmt(best[1])}</b> · <span>${best[2]}% done</span>`;
+    tip.style.left = (x / W * r.width) + "px"; tip.style.top = (Y(best[1]) / H * r.height) + "px"; tip.style.display = "block";
+  };
+  hit.onmouseleave = () => { tip.style.display = "none"; xl.style.display = "none"; };
+}
+pollEta(); setInterval(pollEta, 60000); window.addEventListener("resize", drawEta);
+poll(); setInterval(poll, 2500); setInterval(render, 1000);
+</script>
+</body>
+</html>

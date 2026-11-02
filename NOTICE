@@ -1,0 +1,20 @@
+sparsekv-lab
+Copyright 2026 sparsekv-lab contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+No third-party source code is included. The scripts import TokenGate
+(https://github.com/token-gate-llms/TokenGate, Apache-2.0), transformers and
+compressed-tensors (Apache-2.0), PyTorch (BSD-3-Clause), vLLM
+(https://github.com/vllm-project/vllm) and pth-flash-attn
+(https://github.com/noon-at-cgn/pth-flash-attn) (Apache-2.0).
+
+Benchmarks load SCBench (https://huggingface.co/datasets/microsoft/SCBench, MIT)
+and the TokenGate NIAH samples at run time; neither dataset is redistributed.
+The needle-in-a-haystack method follows Greg Kamradt's NIAH
+(https://github.com/gkamradt/LLMTest_NeedleInAHaystack, MIT, Copyright (c) 2023
+Greg Kamradt). Essay text quoted in recorded results has been redacted (the
+essays are copyrighted by their author).
+
+Models used: Qwen3.5-2B, Qwen3.5-9B and Qwen3.8-27B (Apache-2.0, Alibaba Cloud /
+Qwen team), and liana313/tokengate-niah-qwen3.5-2b (Apache-2.0).

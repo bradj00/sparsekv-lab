@@ -1,0 +1,15 @@
+{"title": "Round 4 · Building sparse KV into HyperQwen",
+ "goal": "Turn the breakthrough into a running server: stage 0 checks the 27B at 32K–128K, then stages 1–5 build, port, harden and A/B it against the current dense server. Estimates assume continuous work and will be corrected as stages finish.",
+ "phases": [
+  ["s0lab", "S0 · Lab card", "The 3090 Ti keeps serving; the 3090 becomes the lab card", 5],
+  ["s0harness", "S0 · 128K harness", "Fit 27B + 128K cache on one 24 GB card: preallocated KV, snapshot/restore instead of copies, flash prefill with offset", 60],
+  ["s0_32", "S0 · 27B @ 32K", "Needle, sentence recall, code next-line: full vs exact top-1% vs sketch 1% vs sketch capped at 4K tokens; attention mass captured; working set", 35],
+  ["s0_64", "S0 · 27B @ 64K", "Same tests at 64K", 50],
+  ["s0_128", "S0 · 27B @ 128K", "Same tests at 128K (our production window is 150K)", 90],
+  ["s0gate", "S0 · Go / no-go", "Does the sketch hold at long context? Pick budget, cap and basis for the build", 15],
+  ["s1", "S1 · Sparse decode kernel", "Sketch cache + selector + Triton int8 sparse attention in HyperQwen, GPU only. Delivers the long-chat speedup", 2400],
+  ["s2", "S2 · Port HiSparse", "Port vLLM HiSparse + PR #59209 host-RAM KV tier onto our 0.31 fork", 1920],
+  ["s3", "S3 · Wire selector into HiSparse", "Spill to host RAM, hot buffer, zero-copy fetch; outputs match S1", 2400],
+  ["s4", "S4 · Production features + soak", "Prefix caching, chunked prefill, 2×150K, preemption; 24 h soak", 1440],
+  ["s5", "S5 · Tune + A/B vs dense baseline", "1 and 2 users, 32K–150K + max context; ships only if it beats today at 1 user", 1440]
+ ]}

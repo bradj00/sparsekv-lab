@@ -1,0 +1,140 @@
+PROGRESS 2 loading hybrid Qwen3.5-2B needle gate
+[tokengate] downloading checkpoint from hf.co/liana313/tokengate-niah-qwen3.5-2b ...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 3227.63it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 12071.35it/s]
+[gate] loaded LoRA $HF_HOME/hub/models--liana313--tokengate-niah-qwen3.5-2b/snapshots/b1fe3e72b9896efc821fbfa02a19fcded4de6d77/lora_step18000.pt (rank=16, alpha=32.0, targets=['self_attn.q_proj', 'self_attn.v_proj'], layers=3..23)
+[FlexAttention] patched 6 full-attention layers: [3, 7, 11, 15, 19, 23]
+[gate] attention kernels: fa2 -> causal/bias = ('flash', 'fa2-bias')
+[FlexAttention] Warming up compilation...
+[FlexAttention] Warmup complete
+[gate] scoring branch (mlp): 25.17M params, fp32 storage, compute in the backbone dtype (3 CastLinears' bf16 copies frozen)
+[gate] ready (layer=1, d_model=2048)
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+PROGRESS 6 essays A_question_first K=all: acc 0 needle 100% ordinary 100%
+PROGRESS 7 essays A_question_first K=25%: acc 0 needle 43% ordinary 25%
+PROGRESS 9 essays A_question_first K=2000: acc 0 needle 22% ordinary 6%
+PROGRESS 10 essays A_question_first K=500: acc 0 needle 17% ordinary 1%
+PROGRESS 11 essays B_question_after K=all: acc 0 needle 100% ordinary 100%
+PROGRESS 13 essays B_question_after K=25%: acc 0 needle 43% ordinary 25%
+PROGRESS 14 essays B_question_after K=2000: acc 0 needle 22% ordinary 5%
+PROGRESS 16 essays B_question_after K=500: acc 0 needle 17% ordinary 1%
+PROGRESS 17 essays A_question_first K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 18 essays A_question_first K=25%: acc 1 needle 64% ordinary 23%
+PROGRESS 20 essays A_question_first K=2000: acc 1 needle 44% ordinary 6%
+PROGRESS 21 essays A_question_first K=500: acc 1 needle 44% ordinary 2%
+PROGRESS 22 essays B_question_after K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 24 essays B_question_after K=25%: acc 1 needle 64% ordinary 23%
+PROGRESS 25 essays B_question_after K=2000: acc 1 needle 44% ordinary 6%
+PROGRESS 27 essays B_question_after K=500: acc 1 needle 44% ordinary 2%
+PROGRESS 28 essays A_question_first K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 29 essays A_question_first K=25%: acc 1 needle 69% ordinary 25%
+PROGRESS 31 essays A_question_first K=2000: acc 1 needle 54% ordinary 6%
+PROGRESS 32 essays A_question_first K=500: acc 1 needle 35% ordinary 2%
+PROGRESS 33 essays B_question_after K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 35 essays B_question_after K=25%: acc 1 needle 69% ordinary 26%
+PROGRESS 36 essays B_question_after K=2000: acc 1 needle 54% ordinary 6%
+PROGRESS 38 essays B_question_after K=500: acc 1 needle 35% ordinary 2%
+PROGRESS 39 essays A_question_first K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 40 essays A_question_first K=25%: acc 1 needle 60% ordinary 24%
+PROGRESS 42 essays A_question_first K=2000: acc 1 needle 48% ordinary 7%
+PROGRESS 43 essays A_question_first K=500: acc 1 needle 40% ordinary 2%
+PROGRESS 44 essays B_question_after K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 46 essays B_question_after K=25%: acc 1 needle 60% ordinary 24%
+PROGRESS 47 essays B_question_after K=2000: acc 1 needle 48% ordinary 7%
+PROGRESS 49 essays B_question_after K=500: acc 1 needle 40% ordinary 2%
+PROGRESS 50 essays A_question_first K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 51 essays A_question_first K=25%: acc 1 needle 68% ordinary 27%
+PROGRESS 53 essays A_question_first K=2000: acc 1 needle 50% ordinary 7%
+PROGRESS 54 essays A_question_first K=500: acc 1 needle 45% ordinary 2%
+PROGRESS 55 essays B_question_after K=all: acc 1 needle 100% ordinary 100%
+PROGRESS 57 essays B_question_after K=25%: acc 1 needle 68% ordinary 27%
+PROGRESS 58 essays B_question_after K=2000: acc 1 needle 50% ordinary 7%
+PROGRESS 60 essays B_question_after K=500: acc 0 needle 41% ordinary 2%
+PROGRESS 62 loading Qwen3-1.7B RepoBench (code) gate
+[tokengate] downloading checkpoint from hf.co/liana313/tokengate-repobench-qwen3-1.7b ...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:00,  7.06it/s]Fetching 4 files:  75%|███████▌  | 3/4 [00:04<00:01,  1.69s/it]Fetching 4 files: 100%|██████████| 4/4 [00:09<00:00,  2.74s/it]Fetching 4 files: 100%|██████████| 4/4 [00:09<00:00,  2.34s/it]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:27<00:27, 27.07s/it]Fetching 2 files: 100%|██████████| 2/2 [00:34<00:00, 15.78s/it]Fetching 2 files: 100%|██████████| 2/2 [00:34<00:00, 17.47s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 11882.21it/s]
+[gate] loaded LoRA $HF_HOME/hub/models--liana313--tokengate-repobench-qwen3-1.7b/snapshots/db69800c2a48e3ddded250b7c0db56fb89bf0fdb/lora_step6000.pt (rank=16, alpha=32.0, targets=['self_attn.q_proj', 'self_attn.v_proj'], layers=0..27)
+[FlexAttention] patched 28 full-attention layers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+[gate] attention kernels: fa2 -> causal/bias = ('flash', 'fa2-bias')
+[FlexAttention] Warming up compilation...
+[FlexAttention] Warmup complete
+[gate] scoring branch (mlp): 25.17M params, fp32 storage, compute in the backbone dtype (3 CastLinears' bf16 copies frozen)
+[gate] ready (layer=1, d_model=2048)
+PROGRESS 62 code K=all: next-line edit-sim 0.16
+PROGRESS 63 code K=25%: next-line edit-sim 0.26
+PROGRESS 63 code K=2000: next-line edit-sim 0.25
+PROGRESS 64 code K=all: next-line edit-sim 0.27
+PROGRESS 64 code K=25%: next-line edit-sim 0.14
+PROGRESS 65 code K=2000: next-line edit-sim 0.24
+PROGRESS 65 code K=all: next-line edit-sim 0.64
+PROGRESS 66 code K=25%: next-line edit-sim 0.21
+PROGRESS 66 code K=2000: next-line edit-sim 0.14
+PROGRESS 67 code K=all: next-line edit-sim 0.33
+PROGRESS 67 code K=25%: next-line edit-sim 0.18
+PROGRESS 68 code K=2000: next-line edit-sim 0.22
+PROGRESS 68 code K=all: next-line edit-sim 1.00
+PROGRESS 69 code K=25%: next-line edit-sim 0.14
+PROGRESS 69 code K=2000: next-line edit-sim 0.07
+PROGRESS 70 code K=all: next-line edit-sim 0.23
+PROGRESS 70 code K=25%: next-line edit-sim 0.14
+PROGRESS 71 code K=2000: next-line edit-sim 0.26
+PROGRESS 71 code K=all: next-line edit-sim 0.50
+PROGRESS 72 code K=25%: next-line edit-sim 0.21
+PROGRESS 72 code K=2000: next-line edit-sim 0.37
+PROGRESS 73 code K=all: next-line edit-sim 0.59
+PROGRESS 73 code K=25%: next-line edit-sim 0.20
+PROGRESS 74 code K=2000: next-line edit-sim 0.20
+PROGRESS 74 code K=all: next-line edit-sim 0.27
+PROGRESS 75 code K=25%: next-line edit-sim 0.30
+PROGRESS 75 code K=2000: next-line edit-sim 0.37
+PROGRESS 76 code K=all: next-line edit-sim 0.41
+PROGRESS 76 code K=25%: next-line edit-sim 0.20
+PROGRESS 77 code K=2000: next-line edit-sim 0.22
+PROGRESS 77 code K=all: next-line edit-sim 0.11
+PROGRESS 78 code K=25%: next-line edit-sim 0.16
+PROGRESS 78 code K=2000: next-line edit-sim 0.12
+PROGRESS 79 code K=all: next-line edit-sim 0.33
+PROGRESS 79 code K=25%: next-line edit-sim 0.08
+PROGRESS 80 code K=2000: next-line edit-sim 0.22
+PROGRESS 80 code K=all: next-line edit-sim 0.33
+PROGRESS 81 code K=25%: next-line edit-sim 0.34
+PROGRESS 81 code K=2000: next-line edit-sim 0.37
+PROGRESS 82 code K=all: next-line edit-sim 1.00
+PROGRESS 82 code K=25%: next-line edit-sim 1.00
+PROGRESS 83 code K=2000: next-line edit-sim 1.00
+PROGRESS 83 code K=all: next-line edit-sim 0.55
+PROGRESS 84 code K=25%: next-line edit-sim 0.15
+PROGRESS 84 code K=2000: next-line edit-sim 0.21
+PROGRESS 85 code K=all: next-line edit-sim 0.75
+PROGRESS 85 code K=25%: next-line edit-sim 0.31
+PROGRESS 86 code K=2000: next-line edit-sim 0.16
+PROGRESS 86 code K=all: next-line edit-sim 0.48
+PROGRESS 87 code K=25%: next-line edit-sim 0.22
+PROGRESS 87 code K=2000: next-line edit-sim 0.26
+PROGRESS 88 code K=all: next-line edit-sim 0.17
+PROGRESS 88 code K=25%: next-line edit-sim 0.27
+PROGRESS 89 code K=2000: next-line edit-sim 0.21
+PROGRESS 89 code K=all: next-line edit-sim 0.17
+PROGRESS 90 code K=25%: next-line edit-sim 0.22
+PROGRESS 90 code K=2000: next-line edit-sim 0.16
+PROGRESS 91 code K=all: next-line edit-sim 0.92
+PROGRESS 91 code K=25%: next-line edit-sim 0.68
+PROGRESS 92 code K=2000: next-line edit-sim 0.67
+PROGRESS 92 code K=all: next-line edit-sim 0.56
+PROGRESS 93 code K=25%: next-line edit-sim 0.33
+PROGRESS 93 code K=2000: next-line edit-sim 0.29
+PROGRESS 94 code K=all: next-line edit-sim 0.45
+PROGRESS 94 code K=25%: next-line edit-sim 0.18
+PROGRESS 95 code K=2000: next-line edit-sim 0.15
+PROGRESS 95 code K=all: next-line edit-sim 1.00
+PROGRESS 96 code K=25%: next-line edit-sim 0.52
+PROGRESS 96 code K=2000: next-line edit-sim 0.52
+PROGRESS 97 code K=all: next-line edit-sim 0.24
+PROGRESS 97 code K=25%: next-line edit-sim 0.24
+PROGRESS 98 code K=2000: next-line edit-sim 0.29
+RESULT {"essays": {"A_question_first|K=all": {"acc": 0.8, "needle_kept": 1.0, "ordinary_kept": 1.0, "ordinary_full": 1.0, "ttft": 1.99}, "A_question_first|K=25%": {"acc": 0.8, "needle_kept": 0.61, "ordinary_kept": 0.248, "ordinary_full": 0.0, "ttft": 1.667}, "A_question_first|K=2000": {"acc": 0.8, "needle_kept": 0.435, "ordinary_kept": 0.064, "ordinary_full": 0.0, "ttft": 0.224}, "A_question_first|K=500": {"acc": 0.8, "needle_kept": 0.363, "ordinary_kept": 0.017, "ordinary_full": 0.0, "ttft": 0.159}, "B_question_after|K=all": {"acc": 0.8, "needle_kept": 1.0, "ordinary_kept": 1.0, "ordinary_full": 1.0, "ttft": 1.961}, "B_question_after|K=25%": {"acc": 0.8, "needle_kept": 0.61, "ordinary_kept": 0.25, "ordinary_full": 0.0, "ttft": 0.505}, "B_question_after|K=2000": {"acc": 0.8, "needle_kept": 0.435, "ordinary_kept": 0.063, "ordinary_full": 0.0, "ttft": 0.225}, "B_question_after|K=500": {"acc": 0.6, "needle_kept": 0.354, "ordinary_kept": 0.017, "ordinary_full": 0.0, "ttft": 0.159}}, "code": {"K=all": 0.477, "K=25%": 0.278, "K=2000": 0.291}, "code_state_tokens": 30375}

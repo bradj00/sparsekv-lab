@@ -1,0 +1,13 @@
+{"title": "Round 3 · Breakthrough hardening",
+ "goal": "Turn 'query-aware selection keeps full recall' into a buildable optimization for the 27B on 2×3090: prove it at scale, size it, and plan the port.",
+ "phases": [
+  ["lab", "Lab card + thermal watchdog", "The 3090 Ti keeps serving; 3090 = lab card; watchdog stops lab jobs if anything runs hot", 5],
+  ["longans", "Long answers + hot-buffer sim", "512-token answers: how big does the working set get? Simulate an LRU hot buffer at 5–30% of context → bytes fetched per token", 40],
+  ["basis", "One sketch basis for all documents", "Fit the key sketch on one document, use it on others and on appended turns. Needed for prefix caching", 30],
+  ["xlayer", "Cross-layer selection", "Pick tokens in one attention layer, reuse for the next 1–3 (selector cost ÷2–4)", 30],
+  ["scale", "Scale-up: Qwen3.5-9B", "Bigger hybrid, closer to our 27B: full vs oracle vs sketch vs choose-once", 60],
+  ["scbench", "SCBench multi-turn", "Published multi-turn KV benchmark (repo QA, key-value retrieval): full vs sketch vs choose-once", 60],
+  ["kernel", "Decode speed at 27B shapes", "Micro-benchmark on the 3090: full attention over 128K–256K vs sketch scan + top-2% exact attention", 45],
+  ["port", "Port plan → HyperQwen", "Agent reads vLLM HiSparse + PR #59209 and maps the exact changes for our fork", 40],
+  ["report", "Findings report", "Numbers, design, projected agents/context per card, risks, build order", 20]
+ ]}

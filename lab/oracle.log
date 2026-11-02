@@ -1,0 +1,463 @@
+PROGRESS 2 loading Qwen/Qwen3.5-2B
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 14718.95it/s]
+PROGRESS 3 essay 1/5 needle full@all: 1.00
+PROGRESS 3 essay 1/5 needle oracle@0.25: 1.00
+PROGRESS 3 essay 1/5 needle oracle@0.06: 1.00
+PROGRESS 3 essay 1/5 needle oracle@0.02: 1.00
+PROGRESS 4 essay 1/5 needle snap@0.25: 0.17
+PROGRESS 4 essay 1/5 needle snap@0.06: 0.00
+PROGRESS 4 essay 1/5 needle snap@0.02: 0.17
+PROGRESS 4 essay 1/5 needle window@0.25: 0.25
+PROGRESS 4 essay 1/5 needle window@0.06: 0.33
+PROGRESS 5 essay 1/5 needle window@0.02: 0.33
+PROGRESS 5 essay 1/5 essay-complete full@all: 1.00
+PROGRESS 5 essay 1/5 essay-complete oracle@0.25: 1.00
+PROGRESS 5 essay 1/5 essay-complete oracle@0.06: 1.00
+PROGRESS 5 essay 1/5 essay-complete oracle@0.02: 1.00
+PROGRESS 6 essay 1/5 essay-complete snap@0.25: 0.06
+PROGRESS 6 essay 1/5 essay-complete snap@0.06: 0.06
+PROGRESS 6 essay 1/5 essay-complete snap@0.02: 0.06
+PROGRESS 6 essay 1/5 essay-complete window@0.25: 0.06
+PROGRESS 6 essay 1/5 essay-complete window@0.06: 0.06
+PROGRESS 7 essay 1/5 essay-complete window@0.02: 0.06
+PROGRESS 7 essay 1/5 essay-complete full@all: 1.00
+PROGRESS 7 essay 1/5 essay-complete oracle@0.25: 1.00
+PROGRESS 7 essay 1/5 essay-complete oracle@0.06: 1.00
+PROGRESS 7 essay 1/5 essay-complete oracle@0.02: 1.00
+PROGRESS 8 essay 1/5 essay-complete snap@0.25: 0.83
+PROGRESS 8 essay 1/5 essay-complete snap@0.06: 0.00
+PROGRESS 8 essay 1/5 essay-complete snap@0.02: 0.00
+PROGRESS 8 essay 1/5 essay-complete window@0.25: 0.00
+PROGRESS 8 essay 1/5 essay-complete window@0.06: 0.00
+PROGRESS 9 essay 1/5 essay-complete window@0.02: 0.00
+PROGRESS 9 essay 1/5 essay-complete full@all: 0.08
+PROGRESS 9 essay 1/5 essay-complete oracle@0.25: 0.08
+PROGRESS 9 essay 1/5 essay-complete oracle@0.06: 0.08
+PROGRESS 9 essay 1/5 essay-complete oracle@0.02: 0.17
+PROGRESS 10 essay 1/5 essay-complete snap@0.25: 0.83
+PROGRESS 10 essay 1/5 essay-complete snap@0.06: 0.17
+PROGRESS 10 essay 1/5 essay-complete snap@0.02: 0.00
+PROGRESS 10 essay 1/5 essay-complete window@0.25: 0.83
+PROGRESS 10 essay 1/5 essay-complete window@0.06: 0.17
+PROGRESS 11 essay 1/5 essay-complete window@0.02: 0.08
+PROGRESS 11 essay 1/5 essay-complete full@all: 0.20
+PROGRESS 11 essay 1/5 essay-complete oracle@0.25: 1.00
+PROGRESS 11 essay 1/5 essay-complete oracle@0.06: 1.00
+PROGRESS 11 essay 1/5 essay-complete oracle@0.02: 1.00
+PROGRESS 12 essay 1/5 essay-complete snap@0.25: 0.10
+PROGRESS 12 essay 1/5 essay-complete snap@0.06: 0.10
+PROGRESS 12 essay 1/5 essay-complete snap@0.02: 0.10
+PROGRESS 12 essay 1/5 essay-complete window@0.25: 0.10
+PROGRESS 13 essay 1/5 essay-complete window@0.06: 0.10
+PROGRESS 13 essay 1/5 essay-complete window@0.02: 0.10
+PROGRESS 13 essay 1/5 essay-complete full@all: 1.00
+PROGRESS 13 essay 1/5 essay-complete oracle@0.25: 1.00
+PROGRESS 13 essay 1/5 essay-complete oracle@0.06: 1.00
+PROGRESS 14 essay 1/5 essay-complete oracle@0.02: 1.00
+PROGRESS 14 essay 1/5 essay-complete snap@0.25: 0.36
+PROGRESS 14 essay 1/5 essay-complete snap@0.06: 0.36
+PROGRESS 14 essay 1/5 essay-complete snap@0.02: 0.00
+PROGRESS 14 essay 1/5 essay-complete window@0.25: 0.18
+PROGRESS 15 essay 1/5 essay-complete window@0.06: 0.18
+PROGRESS 15 essay 1/5 essay-complete window@0.02: 0.18
+PROGRESS 15 essay 2/5 needle full@all: 1.00
+PROGRESS 15 essay 2/5 needle oracle@0.25: 1.00
+PROGRESS 15 essay 2/5 needle oracle@0.06: 1.00
+PROGRESS 16 essay 2/5 needle oracle@0.02: 1.00
+PROGRESS 16 essay 2/5 needle snap@0.25: 0.42
+PROGRESS 16 essay 2/5 needle snap@0.06: 0.25
+PROGRESS 16 essay 2/5 needle snap@0.02: 0.25
+PROGRESS 16 essay 2/5 needle window@0.25: 0.25
+PROGRESS 17 essay 2/5 needle window@0.06: 0.25
+PROGRESS 17 essay 2/5 needle window@0.02: 0.25
+PROGRESS 17 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 17 essay 2/5 essay-complete oracle@0.25: 1.00
+PROGRESS 17 essay 2/5 essay-complete oracle@0.06: 1.00
+PROGRESS 18 essay 2/5 essay-complete oracle@0.02: 1.00
+PROGRESS 18 essay 2/5 essay-complete snap@0.25: 0.44
+PROGRESS 18 essay 2/5 essay-complete snap@0.06: 0.44
+PROGRESS 18 essay 2/5 essay-complete snap@0.02: 0.44
+PROGRESS 18 essay 2/5 essay-complete window@0.25: 0.44
+PROGRESS 19 essay 2/5 essay-complete window@0.06: 0.44
+PROGRESS 19 essay 2/5 essay-complete window@0.02: 0.44
+PROGRESS 19 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 19 essay 2/5 essay-complete oracle@0.25: 1.00
+PROGRESS 19 essay 2/5 essay-complete oracle@0.06: 1.00
+PROGRESS 20 essay 2/5 essay-complete oracle@0.02: 1.00
+PROGRESS 20 essay 2/5 essay-complete snap@0.25: 0.00
+PROGRESS 20 essay 2/5 essay-complete snap@0.06: 0.00
+PROGRESS 20 essay 2/5 essay-complete snap@0.02: 0.00
+PROGRESS 20 essay 2/5 essay-complete window@0.25: 0.00
+PROGRESS 21 essay 2/5 essay-complete window@0.06: 0.00
+PROGRESS 21 essay 2/5 essay-complete window@0.02: 0.00
+PROGRESS 21 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 21 essay 2/5 essay-complete oracle@0.25: 1.00
+PROGRESS 22 essay 2/5 essay-complete oracle@0.06: 1.00
+PROGRESS 22 essay 2/5 essay-complete oracle@0.02: 1.00
+PROGRESS 22 essay 2/5 essay-complete snap@0.25: 1.00
+PROGRESS 22 essay 2/5 essay-complete snap@0.06: 0.18
+PROGRESS 22 essay 2/5 essay-complete snap@0.02: 0.18
+PROGRESS 23 essay 2/5 essay-complete window@0.25: 0.18
+PROGRESS 23 essay 2/5 essay-complete window@0.06: 0.18
+PROGRESS 23 essay 2/5 essay-complete window@0.02: 0.18
+PROGRESS 23 essay 2/5 essay-complete full@all: 1.00
+PROGRESS 23 essay 2/5 essay-complete oracle@0.25: 1.00
+PROGRESS 24 essay 2/5 essay-complete oracle@0.06: 1.00
+PROGRESS 24 essay 2/5 essay-complete oracle@0.02: 1.00
+PROGRESS 24 essay 2/5 essay-complete snap@0.25: 1.00
+PROGRESS 24 essay 2/5 essay-complete snap@0.06: 0.18
+PROGRESS 24 essay 2/5 essay-complete snap@0.02: 0.18
+PROGRESS 25 essay 2/5 essay-complete window@0.25: 0.18
+PROGRESS 25 essay 2/5 essay-complete window@0.06: 0.18
+PROGRESS 25 essay 2/5 essay-complete window@0.02: 0.18
+PROGRESS 25 essay 2/5 essay-complete full@all: 0.00
+PROGRESS 25 essay 2/5 essay-complete oracle@0.25: 0.00
+PROGRESS 26 essay 2/5 essay-complete oracle@0.06: 0.00
+PROGRESS 26 essay 2/5 essay-complete oracle@0.02: 1.00
+PROGRESS 26 essay 2/5 essay-complete snap@0.25: 0.00
+PROGRESS 26 essay 2/5 essay-complete snap@0.06: 0.00
+PROGRESS 26 essay 2/5 essay-complete snap@0.02: 0.00
+PROGRESS 27 essay 2/5 essay-complete window@0.25: 0.00
+PROGRESS 27 essay 2/5 essay-complete window@0.06: 0.00
+PROGRESS 27 essay 2/5 essay-complete window@0.02: 0.00
+PROGRESS 27 essay 3/5 needle full@all: 1.00
+PROGRESS 27 essay 3/5 needle oracle@0.25: 1.00
+PROGRESS 28 essay 3/5 needle oracle@0.06: 1.00
+PROGRESS 28 essay 3/5 needle oracle@0.02: 1.00
+PROGRESS 28 essay 3/5 needle snap@0.25: 0.77
+PROGRESS 28 essay 3/5 needle snap@0.06: 0.15
+PROGRESS 28 essay 3/5 needle snap@0.02: 0.23
+PROGRESS 29 essay 3/5 needle window@0.25: 0.15
+PROGRESS 29 essay 3/5 needle window@0.06: 0.23
+PROGRESS 29 essay 3/5 needle window@0.02: 0.23
+PROGRESS 29 essay 3/5 essay-complete full@all: 0.36
+PROGRESS 29 essay 3/5 essay-complete oracle@0.25: 0.36
+PROGRESS 30 essay 3/5 essay-complete oracle@0.06: 0.45
+PROGRESS 30 essay 3/5 essay-complete oracle@0.02: 0.45
+PROGRESS 30 essay 3/5 essay-complete snap@0.25: 0.45
+PROGRESS 30 essay 3/5 essay-complete snap@0.06: 0.09
+PROGRESS 30 essay 3/5 essay-complete snap@0.02: 0.09
+PROGRESS 31 essay 3/5 essay-complete window@0.25: 0.09
+PROGRESS 31 essay 3/5 essay-complete window@0.06: 0.09
+PROGRESS 31 essay 3/5 essay-complete window@0.02: 0.09
+PROGRESS 31 essay 3/5 essay-complete full@all: 1.00
+PROGRESS 32 essay 3/5 essay-complete oracle@0.25: 1.00
+PROGRESS 32 essay 3/5 essay-complete oracle@0.06: 1.00
+PROGRESS 32 essay 3/5 essay-complete oracle@0.02: 0.12
+PROGRESS 32 essay 3/5 essay-complete snap@0.25: 0.00
+PROGRESS 32 essay 3/5 essay-complete snap@0.06: 0.38
+PROGRESS 33 essay 3/5 essay-complete snap@0.02: 0.38
+PROGRESS 33 essay 3/5 essay-complete window@0.25: 1.00
+PROGRESS 33 essay 3/5 essay-complete window@0.06: 0.38
+PROGRESS 33 essay 3/5 essay-complete window@0.02: 0.38
+PROGRESS 33 essay 3/5 essay-complete full@all: 1.00
+PROGRESS 34 essay 3/5 essay-complete oracle@0.25: 1.00
+PROGRESS 34 essay 3/5 essay-complete oracle@0.06: 1.00
+PROGRESS 34 essay 3/5 essay-complete oracle@0.02: 1.00
+PROGRESS 34 essay 3/5 essay-complete snap@0.25: 0.00
+PROGRESS 34 essay 3/5 essay-complete snap@0.06: 0.00
+PROGRESS 35 essay 3/5 essay-complete snap@0.02: 0.00
+PROGRESS 35 essay 3/5 essay-complete window@0.25: 0.00
+PROGRESS 35 essay 3/5 essay-complete window@0.06: 0.00
+PROGRESS 35 essay 3/5 essay-complete window@0.02: 0.00
+PROGRESS 35 essay 3/5 essay-complete full@all: 0.20
+PROGRESS 36 essay 3/5 essay-complete oracle@0.25: 0.20
+PROGRESS 36 essay 3/5 essay-complete oracle@0.06: 0.30
+PROGRESS 36 essay 3/5 essay-complete oracle@0.02: 0.30
+PROGRESS 36 essay 3/5 essay-complete snap@0.25: 0.20
+PROGRESS 36 essay 3/5 essay-complete snap@0.06: 0.20
+PROGRESS 37 essay 3/5 essay-complete snap@0.02: 0.20
+PROGRESS 37 essay 3/5 essay-complete window@0.25: 0.20
+PROGRESS 37 essay 3/5 essay-complete window@0.06: 0.20
+PROGRESS 37 essay 3/5 essay-complete window@0.02: 0.20
+PROGRESS 37 essay 3/5 essay-complete full@all: 0.53
+PROGRESS 38 essay 3/5 essay-complete oracle@0.25: 0.53
+PROGRESS 38 essay 3/5 essay-complete oracle@0.06: 0.53
+PROGRESS 38 essay 3/5 essay-complete oracle@0.02: 0.53
+PROGRESS 38 essay 3/5 essay-complete snap@0.25: 0.47
+PROGRESS 38 essay 3/5 essay-complete snap@0.06: 0.07
+PROGRESS 39 essay 3/5 essay-complete snap@0.02: 0.07
+PROGRESS 39 essay 3/5 essay-complete window@0.25: 0.27
+PROGRESS 39 essay 3/5 essay-complete window@0.06: 0.07
+PROGRESS 39 essay 3/5 essay-complete window@0.02: 0.07
+PROGRESS 39 essay 4/5 needle full@all: 1.00
+PROGRESS 40 essay 4/5 needle oracle@0.25: 1.00
+PROGRESS 40 essay 4/5 needle oracle@0.06: 1.00
+PROGRESS 40 essay 4/5 needle oracle@0.02: 1.00
+PROGRESS 40 essay 4/5 needle snap@0.25: 0.31
+PROGRESS 41 essay 4/5 needle snap@0.06: 0.23
+PROGRESS 41 essay 4/5 needle snap@0.02: 0.31
+PROGRESS 41 essay 4/5 needle window@0.25: 1.00
+PROGRESS 41 essay 4/5 needle window@0.06: 0.23
+PROGRESS 41 essay 4/5 needle window@0.02: 0.23
+PROGRESS 42 essay 4/5 essay-complete full@all: 0.00
+PROGRESS 42 essay 4/5 essay-complete oracle@0.25: 0.00
+PROGRESS 42 essay 4/5 essay-complete oracle@0.06: 0.00
+PROGRESS 42 essay 4/5 essay-complete oracle@0.02: 0.00
+PROGRESS 42 essay 4/5 essay-complete snap@0.25: 0.00
+PROGRESS 43 essay 4/5 essay-complete snap@0.06: 0.00
+PROGRESS 43 essay 4/5 essay-complete snap@0.02: 0.00
+PROGRESS 43 essay 4/5 essay-complete window@0.25: 0.00
+PROGRESS 43 essay 4/5 essay-complete window@0.06: 0.00
+PROGRESS 43 essay 4/5 essay-complete window@0.02: 0.00
+PROGRESS 44 essay 4/5 essay-complete full@all: 1.00
+PROGRESS 44 essay 4/5 essay-complete oracle@0.25: 1.00
+PROGRESS 44 essay 4/5 essay-complete oracle@0.06: 1.00
+PROGRESS 44 essay 4/5 essay-complete oracle@0.02: 1.00
+PROGRESS 44 essay 4/5 essay-complete snap@0.25: 0.00
+PROGRESS 45 essay 4/5 essay-complete snap@0.06: 0.00
+PROGRESS 45 essay 4/5 essay-complete snap@0.02: 0.00
+PROGRESS 45 essay 4/5 essay-complete window@0.25: 0.00
+PROGRESS 45 essay 4/5 essay-complete window@0.06: 0.00
+PROGRESS 45 essay 4/5 essay-complete window@0.02: 0.00
+PROGRESS 46 essay 4/5 essay-complete full@all: 1.00
+PROGRESS 46 essay 4/5 essay-complete oracle@0.25: 1.00
+PROGRESS 46 essay 4/5 essay-complete oracle@0.06: 1.00
+PROGRESS 46 essay 4/5 essay-complete oracle@0.02: 1.00
+PROGRESS 46 essay 4/5 essay-complete snap@0.25: 0.18
+PROGRESS 47 essay 4/5 essay-complete snap@0.06: 0.18
+PROGRESS 47 essay 4/5 essay-complete snap@0.02: 0.18
+PROGRESS 47 essay 4/5 essay-complete window@0.25: 0.18
+PROGRESS 47 essay 4/5 essay-complete window@0.06: 0.18
+PROGRESS 47 essay 4/5 essay-complete window@0.02: 0.18
+PROGRESS 48 essay 4/5 essay-complete full@all: 1.00
+PROGRESS 48 essay 4/5 essay-complete oracle@0.25: 1.00
+PROGRESS 48 essay 4/5 essay-complete oracle@0.06: 1.00
+PROGRESS 48 essay 4/5 essay-complete oracle@0.02: 1.00
+PROGRESS 48 essay 4/5 essay-complete snap@0.25: 0.08
+PROGRESS 49 essay 4/5 essay-complete snap@0.06: 0.08
+PROGRESS 49 essay 4/5 essay-complete snap@0.02: 0.08
+PROGRESS 49 essay 4/5 essay-complete window@0.25: 0.00
+PROGRESS 49 essay 4/5 essay-complete window@0.06: 0.00
+PROGRESS 50 essay 4/5 essay-complete window@0.02: 0.00
+PROGRESS 50 essay 4/5 essay-complete full@all: 0.00
+PROGRESS 50 essay 4/5 essay-complete oracle@0.25: 0.00
+PROGRESS 50 essay 4/5 essay-complete oracle@0.06: 0.00
+PROGRESS 50 essay 4/5 essay-complete oracle@0.02: 0.00
+PROGRESS 51 essay 4/5 essay-complete snap@0.25: 0.06
+PROGRESS 51 essay 4/5 essay-complete snap@0.06: 0.06
+PROGRESS 51 essay 4/5 essay-complete snap@0.02: 0.06
+PROGRESS 51 essay 4/5 essay-complete window@0.25: 0.00
+PROGRESS 51 essay 4/5 essay-complete window@0.06: 0.00
+PROGRESS 52 essay 4/5 essay-complete window@0.02: 0.00
+PROGRESS 52 essay 5/5 needle full@all: 1.00
+PROGRESS 52 essay 5/5 needle oracle@0.25: 1.00
+PROGRESS 52 essay 5/5 needle oracle@0.06: 1.00
+PROGRESS 52 essay 5/5 needle oracle@0.02: 1.00
+PROGRESS 53 essay 5/5 needle snap@0.25: 1.00
+PROGRESS 53 essay 5/5 needle snap@0.06: 1.00
+PROGRESS 53 essay 5/5 needle snap@0.02: 1.00
+PROGRESS 53 essay 5/5 needle window@0.25: 1.00
+PROGRESS 53 essay 5/5 needle window@0.06: 1.00
+PROGRESS 54 essay 5/5 needle window@0.02: 1.00
+PROGRESS 54 essay 5/5 essay-complete full@all: 1.00
+PROGRESS 54 essay 5/5 essay-complete oracle@0.25: 1.00
+PROGRESS 54 essay 5/5 essay-complete oracle@0.06: 1.00
+PROGRESS 54 essay 5/5 essay-complete oracle@0.02: 1.00
+PROGRESS 55 essay 5/5 essay-complete snap@0.25: 0.00
+PROGRESS 55 essay 5/5 essay-complete snap@0.06: 0.00
+PROGRESS 55 essay 5/5 essay-complete snap@0.02: 0.10
+PROGRESS 55 essay 5/5 essay-complete window@0.25: 0.00
+PROGRESS 55 essay 5/5 essay-complete window@0.06: 0.00
+PROGRESS 56 essay 5/5 essay-complete window@0.02: 0.00
+PROGRESS 56 essay 5/5 essay-complete full@all: 0.13
+PROGRESS 56 essay 5/5 essay-complete oracle@0.25: 0.13
+PROGRESS 56 essay 5/5 essay-complete oracle@0.06: 0.13
+PROGRESS 56 essay 5/5 essay-complete oracle@0.02: 0.13
+PROGRESS 57 essay 5/5 essay-complete snap@0.25: 0.07
+PROGRESS 57 essay 5/5 essay-complete snap@0.06: 0.00
+PROGRESS 57 essay 5/5 essay-complete snap@0.02: 0.00
+PROGRESS 57 essay 5/5 essay-complete window@0.25: 0.13
+PROGRESS 57 essay 5/5 essay-complete window@0.06: 0.00
+PROGRESS 58 essay 5/5 essay-complete window@0.02: 0.00
+PROGRESS 58 essay 5/5 essay-complete full@all: 0.27
+PROGRESS 58 essay 5/5 essay-complete oracle@0.25: 0.33
+PROGRESS 58 essay 5/5 essay-complete oracle@0.06: 0.33
+PROGRESS 58 essay 5/5 essay-complete oracle@0.02: 0.33
+PROGRESS 59 essay 5/5 essay-complete snap@0.25: 0.27
+PROGRESS 59 essay 5/5 essay-complete snap@0.06: 0.27
+PROGRESS 59 essay 5/5 essay-complete snap@0.02: 0.27
+PROGRESS 59 essay 5/5 essay-complete window@0.25: 0.27
+PROGRESS 60 essay 5/5 essay-complete window@0.06: 0.40
+PROGRESS 60 essay 5/5 essay-complete window@0.02: 0.27
+PROGRESS 60 essay 5/5 essay-complete full@all: 1.00
+PROGRESS 60 essay 5/5 essay-complete oracle@0.25: 1.00
+PROGRESS 60 essay 5/5 essay-complete oracle@0.06: 1.00
+PROGRESS 61 essay 5/5 essay-complete oracle@0.02: 1.00
+PROGRESS 61 essay 5/5 essay-complete snap@0.25: 0.07
+PROGRESS 61 essay 5/5 essay-complete snap@0.06: 0.07
+PROGRESS 61 essay 5/5 essay-complete snap@0.02: 0.13
+PROGRESS 61 essay 5/5 essay-complete window@0.25: 0.13
+PROGRESS 62 essay 5/5 essay-complete window@0.06: 0.07
+PROGRESS 62 essay 5/5 essay-complete window@0.02: 0.07
+PROGRESS 62 essay 5/5 essay-complete full@all: 1.00
+PROGRESS 62 essay 5/5 essay-complete oracle@0.25: 1.00
+PROGRESS 62 essay 5/5 essay-complete oracle@0.06: 0.00
+PROGRESS 63 essay 5/5 essay-complete oracle@0.02: 1.00
+PROGRESS 63 essay 5/5 essay-complete snap@0.25: 0.00
+PROGRESS 63 essay 5/5 essay-complete snap@0.06: 0.00
+PROGRESS 63 essay 5/5 essay-complete snap@0.02: 0.00
+PROGRESS 63 essay 5/5 essay-complete window@0.25: 1.00
+PROGRESS 64 essay 5/5 essay-complete window@0.06: 0.00
+PROGRESS 64 essay 5/5 essay-complete window@0.02: 0.00
+PROGRESS 64 code full@all: 1.00
+PROGRESS 64 code oracle@0.25: 1.00
+PROGRESS 64 code oracle@0.06: 1.00
+PROGRESS 65 code oracle@0.02: 1.00
+PROGRESS 65 code snap@0.25: 0.31
+PROGRESS 65 code snap@0.06: 0.12
+PROGRESS 65 code snap@0.02: 0.31
+PROGRESS 65 code window@0.25: 0.31
+PROGRESS 66 code window@0.06: 0.31
+PROGRESS 66 code window@0.02: 0.31
+PROGRESS 66 code full@all: 0.27
+PROGRESS 66 code oracle@0.25: 0.27
+PROGRESS 66 code oracle@0.06: 0.27
+PROGRESS 67 code oracle@0.02: 0.33
+PROGRESS 67 code snap@0.25: 0.27
+PROGRESS 67 code snap@0.06: 0.08
+PROGRESS 67 code snap@0.02: 0.21
+PROGRESS 67 code window@0.25: 0.27
+PROGRESS 68 code window@0.06: 0.21
+PROGRESS 68 code window@0.02: 0.21
+PROGRESS 68 code full@all: 1.00
+PROGRESS 68 code oracle@0.25: 1.00
+PROGRESS 69 code oracle@0.06: 1.00
+PROGRESS 69 code oracle@0.02: 1.00
+PROGRESS 69 code snap@0.25: 0.23
+PROGRESS 69 code snap@0.06: 0.72
+PROGRESS 69 code snap@0.02: 0.72
+PROGRESS 70 code window@0.25: 1.00
+PROGRESS 70 code window@0.06: 0.72
+PROGRESS 70 code window@0.02: 0.72
+PROGRESS 70 code full@all: 0.98
+PROGRESS 70 code oracle@0.25: 0.98
+PROGRESS 71 code oracle@0.06: 0.98
+PROGRESS 71 code oracle@0.02: 0.98
+PROGRESS 71 code snap@0.25: 0.46
+PROGRESS 71 code snap@0.06: 0.63
+PROGRESS 71 code snap@0.02: 0.63
+PROGRESS 72 code window@0.25: 0.63
+PROGRESS 72 code window@0.06: 0.63
+PROGRESS 72 code window@0.02: 0.63
+PROGRESS 72 code full@all: 0.16
+PROGRESS 72 code oracle@0.25: 0.16
+PROGRESS 73 code oracle@0.06: 0.16
+PROGRESS 73 code oracle@0.02: 0.16
+PROGRESS 73 code snap@0.25: 0.11
+PROGRESS 73 code snap@0.06: 0.10
+PROGRESS 73 code snap@0.02: 0.10
+PROGRESS 74 code window@0.25: 0.10
+PROGRESS 74 code window@0.06: 0.10
+PROGRESS 74 code window@0.02: 0.10
+PROGRESS 74 code full@all: 0.14
+PROGRESS 74 code oracle@0.25: 0.14
+PROGRESS 75 code oracle@0.06: 0.14
+PROGRESS 75 code oracle@0.02: 0.17
+PROGRESS 75 code snap@0.25: 0.20
+PROGRESS 75 code snap@0.06: 0.09
+PROGRESS 75 code snap@0.02: 0.17
+PROGRESS 76 code window@0.25: 0.09
+PROGRESS 76 code window@0.06: 0.32
+PROGRESS 76 code window@0.02: 0.17
+PROGRESS 76 code full@all: 0.52
+PROGRESS 76 code oracle@0.25: 0.52
+PROGRESS 77 code oracle@0.06: 0.52
+PROGRESS 77 code oracle@0.02: 0.52
+PROGRESS 77 code snap@0.25: 0.40
+PROGRESS 77 code snap@0.06: 0.16
+PROGRESS 77 code snap@0.02: 0.40
+PROGRESS 78 code window@0.25: 0.40
+PROGRESS 78 code window@0.06: 0.40
+PROGRESS 78 code window@0.02: 0.40
+PROGRESS 78 code full@all: 0.47
+PROGRESS 79 code oracle@0.25: 0.47
+PROGRESS 79 code oracle@0.06: 0.47
+PROGRESS 79 code oracle@0.02: 0.47
+PROGRESS 79 code snap@0.25: 0.10
+PROGRESS 79 code snap@0.06: 0.97
+PROGRESS 80 code snap@0.02: 0.97
+PROGRESS 80 code window@0.25: 0.97
+PROGRESS 80 code window@0.06: 0.97
+PROGRESS 80 code window@0.02: 0.97
+PROGRESS 80 code full@all: 1.00
+PROGRESS 81 code oracle@0.25: 1.00
+PROGRESS 81 code oracle@0.06: 1.00
+PROGRESS 81 code oracle@0.02: 0.20
+PROGRESS 81 code snap@0.25: 0.15
+PROGRESS 81 code snap@0.06: 0.24
+PROGRESS 82 code snap@0.02: 0.24
+PROGRESS 82 code window@0.25: 0.20
+PROGRESS 82 code window@0.06: 0.16
+PROGRESS 82 code window@0.02: 0.24
+PROGRESS 82 code full@all: 0.16
+PROGRESS 83 code oracle@0.25: 0.16
+PROGRESS 83 code oracle@0.06: 0.16
+PROGRESS 83 code oracle@0.02: 0.16
+PROGRESS 83 code snap@0.25: 0.16
+PROGRESS 83 code snap@0.06: 0.33
+PROGRESS 84 code snap@0.02: 0.33
+PROGRESS 84 code window@0.25: 0.33
+PROGRESS 84 code window@0.06: 0.33
+PROGRESS 84 code window@0.02: 0.33
+PROGRESS 84 code full@all: 0.10
+PROGRESS 85 code oracle@0.25: 0.10
+PROGRESS 85 code oracle@0.06: 0.10
+PROGRESS 85 code oracle@0.02: 0.10
+PROGRESS 85 code snap@0.25: 0.10
+PROGRESS 85 code snap@0.06: 0.19
+PROGRESS 86 code snap@0.02: 0.19
+PROGRESS 86 code window@0.25: 0.19
+PROGRESS 86 code window@0.06: 0.19
+PROGRESS 86 code window@0.02: 0.19
+PROGRESS 86 code full@all: 0.19
+PROGRESS 87 code oracle@0.25: 0.07
+PROGRESS 87 code oracle@0.06: 0.07
+PROGRESS 87 code oracle@0.02: 0.07
+PROGRESS 87 code snap@0.25: 0.19
+PROGRESS 88 code snap@0.06: 0.25
+PROGRESS 88 code snap@0.02: 0.25
+PROGRESS 88 code window@0.25: 0.25
+PROGRESS 88 code window@0.06: 0.25
+PROGRESS 88 code window@0.02: 0.25
+PROGRESS 89 code full@all: 0.38
+PROGRESS 89 code oracle@0.25: 0.38
+PROGRESS 89 code oracle@0.06: 0.38
+PROGRESS 89 code oracle@0.02: 0.38
+PROGRESS 89 code snap@0.25: 0.26
+PROGRESS 90 code snap@0.06: 0.26
+PROGRESS 90 code snap@0.02: 0.56
+PROGRESS 90 code window@0.25: 0.58
+PROGRESS 90 code window@0.06: 0.56
+PROGRESS 90 code window@0.02: 0.49
+PROGRESS 91 code full@all: 0.07
+PROGRESS 91 code oracle@0.25: 0.07
+PROGRESS 91 code oracle@0.06: 1.00
+PROGRESS 91 code oracle@0.02: 1.00
+PROGRESS 91 code snap@0.25: 0.07
+PROGRESS 92 code snap@0.06: 0.07
+PROGRESS 92 code snap@0.02: 0.07
+PROGRESS 92 code window@0.25: 0.07
+PROGRESS 92 code window@0.06: 0.07
+PROGRESS 92 code window@0.02: 0.07
+PROGRESS 93 code full@all: 0.16
+PROGRESS 93 code oracle@0.25: 0.41
+PROGRESS 93 code oracle@0.06: 0.13
+PROGRESS 93 code oracle@0.02: 0.20
+PROGRESS 93 code snap@0.25: 0.13
+PROGRESS 94 code snap@0.06: 0.44
+PROGRESS 94 code snap@0.02: 0.29
+PROGRESS 94 code window@0.25: 0.12
+PROGRESS 94 code window@0.06: 0.63
+PROGRESS 94 code window@0.02: 0.27
+PROGRESS 95 code full@all: 1.00
+PROGRESS 95 code oracle@0.25: 1.00
+PROGRESS 95 code oracle@0.06: 1.00
+PROGRESS 95 code oracle@0.02: 1.00
+PROGRESS 95 code snap@0.25: 0.39
+PROGRESS 96 code snap@0.06: 0.39
+PROGRESS 96 code snap@0.02: 0.39
+PROGRESS 96 code window@0.25: 0.39
+PROGRESS 96 code window@0.06: 0.39
+PROGRESS 97 code window@0.02: 0.39
+RESULT {"needle": {"full@all": 1.0, "oracle@25%": 1.0, "oracle@6%": 1.0, "oracle@2%": 1.0, "snap@25%": 0.532, "snap@6%": 0.327, "snap@2%": 0.391, "window@25%": 0.531, "window@6%": 0.409, "window@2%": 0.409}, "essay-complete": {"full@all": 0.671, "oracle@25%": 0.706, "oracle@6%": 0.674, "oracle@2%": 0.722, "snap@25%": 0.259, "snap@6%": 0.115, "snap@2%": 0.101, "window@25%": 0.21, "window@6%": 0.108, "window@2%": 0.099}, "code-next": {"full@all": 0.476, "oracle@25%": 0.484, "oracle@6%": 0.525, "oracle@2%": 0.485, "snap@25%": 0.221, "snap@6%": 0.315, "snap@2%": 0.365, "window@25%": 0.369, "window@6%": 0.391, "window@2%": 0.359}}

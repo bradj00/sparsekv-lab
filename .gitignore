@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+venv/
+tmp/
+.notify-last.json
+.state.lock
+lab/repo/
+lab/hf/
+lab/models/
+lab/q27-hf/

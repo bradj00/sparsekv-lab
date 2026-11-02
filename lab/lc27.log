@@ -1,0 +1,211 @@
+SELFTEST prefill Lq=1024 off=0 max|err|=0.0079
+SELFTEST prefill Lq=1024 off=3000 max|err|=0.0009
+PROGRESS 1 loading Qwen3.8-27B W4A16 (packed loader)
+MEM after load 13.54 GiB
+PHASE 32K
+PROGRESS 1 32K: prefilling 32000 tokens
+PREFILL 32000 tok in 29s, mem 21.59 GiB, peak 22.46 GiB
+PROGRESS 3 32K needle full@all: 1.00
+PROGRESS 5 32K needle oracle@0.01: 1.00 mass 0.61
+PROGRESS 6 32K needle sh64x@0.01: 1.00 mass 0.49
+PROGRESS 8 32K needle sh64x@0.005: 1.00 mass 0.41
+PROGRESS 10 32K essay-complete full@all: 1.00
+PROGRESS 11 32K essay-complete oracle@0.01: 1.00 mass 0.62
+PROGRESS 13 32K essay-complete sh64x@0.01: 1.00 mass 0.51
+PROGRESS 14 32K essay-complete sh64x@0.005: 1.00 mass 0.42
+PROGRESS 16 32K essay-complete full@all: 1.00
+PROGRESS 18 32K essay-complete oracle@0.01: 1.00 mass 0.60
+PROGRESS 19 32K essay-complete sh64x@0.01: 1.00 mass 0.48
+PROGRESS 21 32K essay-complete sh64x@0.005: 1.00 mass 0.38
+PROGRESS 23 32K essay-complete full@all: 1.00
+PROGRESS 24 32K essay-complete oracle@0.01: 1.00 mass 0.60
+PROGRESS 26 32K essay-complete sh64x@0.01: 1.00 mass 0.48
+PROGRESS 27 32K essay-complete sh64x@0.005: 1.00 mass 0.38
+PROGRESS 29 32K essay-complete full@all: 1.00
+PROGRESS 31 32K essay-complete oracle@0.01: 1.00 mass 0.58
+PROGRESS 32 32K essay-complete sh64x@0.01: 1.00 mass 0.46
+PROGRESS 34 32K essay-complete sh64x@0.005: 1.00 mass 0.37
+PROGRESS 35 32K essay-complete full@all: 1.00
+PROGRESS 37 32K essay-complete oracle@0.01: 1.00 mass 0.59
+PROGRESS 39 32K essay-complete sh64x@0.01: 1.00 mass 0.46
+PROGRESS 40 32K essay-complete sh64x@0.005: 1.00 mass 0.36
+PROGRESS 42 32K essay-complete full@all: 1.00
+PROGRESS 44 32K essay-complete oracle@0.01: 1.00 mass 0.60
+PROGRESS 45 32K essay-complete sh64x@0.01: 1.00 mass 0.47
+PROGRESS 47 32K essay-complete sh64x@0.005: 1.00 mass 0.38
+PROGRESS 1 32K: prefilling 32000 tokens
+PREFILL 32000 tok in 29s, mem 21.59 GiB, peak 22.57 GiB
+PROGRESS 48 32K code-next full@all: 1.00
+PROGRESS 50 32K code-next oracle@0.01: 0.20 mass 0.61
+PROGRESS 52 32K code-next sh64x@0.01: 0.20 mass 0.49
+PROGRESS 53 32K code-next sh64x@0.005: 1.00 mass 0.41
+PROGRESS 55 32K code-next full@all: 1.00
+PROGRESS 56 32K code-next oracle@0.01: 1.00 mass 0.66
+PROGRESS 58 32K code-next sh64x@0.01: 1.00 mass 0.54
+PROGRESS 60 32K code-next sh64x@0.005: 1.00 mass 0.46
+PROGRESS 61 32K code-next full@all: 0.97
+PROGRESS 63 32K code-next oracle@0.01: 1.00 mass 0.64
+PROGRESS 65 32K code-next sh64x@0.01: 1.00 mass 0.53
+PROGRESS 66 32K code-next sh64x@0.005: 1.00 mass 0.44
+PROGRESS 68 32K code-next full@all: 1.00
+PROGRESS 69 32K code-next oracle@0.01: 1.00 mass 0.62
+PROGRESS 71 32K code-next sh64x@0.01: 1.00 mass 0.49
+PROGRESS 73 32K code-next sh64x@0.005: 1.00 mass 0.39
+PROGRESS 74 32K code-next full@all: 1.00
+PROGRESS 76 32K code-next oracle@0.01: 1.00 mass 0.62
+PROGRESS 77 32K code-next sh64x@0.01: 1.00 mass 0.48
+PROGRESS 79 32K code-next sh64x@0.005: 1.00 mass 0.39
+PROGRESS 81 32K code-next full@all: 1.00
+PROGRESS 82 32K code-next oracle@0.01: 1.00 mass 0.63
+PROGRESS 84 32K code-next sh64x@0.01: 1.00 mass 0.50
+PROGRESS 86 32K code-next sh64x@0.005: 1.00 mass 0.41
+PROGRESS 87 32K code-next full@all: 1.00
+PROGRESS 89 32K code-next oracle@0.01: 1.00 mass 0.66
+PROGRESS 90 32K code-next sh64x@0.01: 1.00 mass 0.53
+PROGRESS 92 32K code-next sh64x@0.005: 1.00 mass 0.44
+PROGRESS 94 32K code-next full@all: 1.00
+PROGRESS 95 32K code-next oracle@0.01: 1.00 mass 0.68
+PROGRESS 97 32K code-next sh64x@0.01: 1.00 mass 0.55
+PROGRESS 99 32K code-next sh64x@0.005: 1.00 mass 0.45
+RESULT 32K {"needle": {"full@all": {"score": 1.0, "mass": null, "ws": null}, "oracle@0.01": {"score": 1.0, "mass": 0.606, "ws": 0.248}, "sh64x@0.01": {"score": 1.0, "mass": 0.492, "ws": 0.096}, "sh64x@0.005": {"score": 1.0, "mass": 0.406, "ws": 0.055}}, "essay-complete": {"full@all": {"score": 1.0, "mass": null, "ws": null}, "oracle@0.01": {"score": 1.0, "mass": 0.6, "ws": 0.292}, "sh64x@0.01": {"score": 1.0, "mass": 0.476, "ws": 0.113}, "sh64x@0.005": {"score": 1.0, "mass": 0.382, "ws": 0.067}}, "code-next": {"full@all": {"score": 0.996, "mass": null, "ws": null}, "oracle@0.01": {"score": 0.9, "mass": 0.64, "ws": 0.257}, "sh64x@0.01": {"score": 0.9, "mass": 0.513, "ws": 0.103}, "sh64x@0.005": {"score": 1.0, "mass": 0.424, "ws": 0.057}}}
+PHASE 64K
+PROGRESS 1 64K: prefilling 64000 tokens
+PREFILL 64000 tok in 63s, mem 21.59 GiB, peak 22.57 GiB
+PROGRESS 3 64K needle full@all: 1.00
+PROGRESS 5 64K needle oracle@0.01: 1.00 mass 0.64
+PROGRESS 6 64K needle sh64x@0.01: 1.00 mass 0.53
+PROGRESS 8 64K needle sh64x@0.005: 1.00 mass 0.45
+PROGRESS 9 64K needle full@all: 1.00
+PROGRESS 11 64K needle oracle@0.01: 1.00 mass 0.63
+PROGRESS 12 64K needle sh64x@0.01: 1.00 mass 0.50
+PROGRESS 14 64K needle sh64x@0.005: 1.00 mass 0.42
+PROGRESS 15 64K essay-complete full@all: 1.00
+PROGRESS 17 64K essay-complete oracle@0.01: 1.00 mass 0.63
+PROGRESS 18 64K essay-complete sh64x@0.01: 1.00 mass 0.49
+PROGRESS 20 64K essay-complete sh64x@0.005: 1.00 mass 0.40
+PROGRESS 21 64K essay-complete full@all: 1.00
+PROGRESS 23 64K essay-complete oracle@0.01: 1.00 mass 0.63
+PROGRESS 24 64K essay-complete sh64x@0.01: 1.00 mass 0.50
+PROGRESS 26 64K essay-complete sh64x@0.005: 1.00 mass 0.41
+PROGRESS 27 64K essay-complete full@all: 1.00
+PROGRESS 29 64K essay-complete oracle@0.01: 1.00 mass 0.59
+PROGRESS 30 64K essay-complete sh64x@0.01: 1.00 mass 0.49
+PROGRESS 32 64K essay-complete sh64x@0.005: 1.00 mass 0.38
+PROGRESS 33 64K essay-complete full@all: 1.00
+PROGRESS 35 64K essay-complete oracle@0.01: 1.00 mass 0.61
+PROGRESS 36 64K essay-complete sh64x@0.01: 1.00 mass 0.46
+PROGRESS 38 64K essay-complete sh64x@0.005: 1.00 mass 0.38
+PROGRESS 39 64K essay-complete full@all: 1.00
+PROGRESS 41 64K essay-complete oracle@0.01: 1.00 mass 0.60
+PROGRESS 42 64K essay-complete sh64x@0.01: 1.00 mass 0.46
+PROGRESS 44 64K essay-complete sh64x@0.005: 1.00 mass 0.38
+PROGRESS 45 64K essay-complete full@all: 1.00
+PROGRESS 47 64K essay-complete oracle@0.01: 1.00 mass 0.62
+PROGRESS 48 64K essay-complete sh64x@0.01: 1.00 mass 0.47
+PROGRESS 50 64K essay-complete sh64x@0.005: 1.00 mass 0.40
+PROGRESS 1 64K: prefilling 64000 tokens
+PREFILL 64000 tok in 63s, mem 21.59 GiB, peak 22.70 GiB
+PROGRESS 52 64K code-next full@all: 1.00
+PROGRESS 53 64K code-next oracle@0.01: 1.00 mass 0.68
+PROGRESS 55 64K code-next sh64x@0.01: 1.00 mass 0.57
+PROGRESS 56 64K code-next sh64x@0.005: 1.00 mass 0.50
+PROGRESS 58 64K code-next full@all: 1.00
+PROGRESS 59 64K code-next oracle@0.01: 1.00 mass 0.66
+PROGRESS 61 64K code-next sh64x@0.01: 1.00 mass 0.53
+PROGRESS 62 64K code-next sh64x@0.005: 1.00 mass 0.45
+PROGRESS 64 64K code-next full@all: 1.00
+PROGRESS 65 64K code-next oracle@0.01: 1.00 mass 0.61
+PROGRESS 67 64K code-next sh64x@0.01: 1.00 mass 0.46
+PROGRESS 68 64K code-next sh64x@0.005: 1.00 mass 0.36
+PROGRESS 70 64K code-next full@all: 1.00
+PROGRESS 71 64K code-next oracle@0.01: 1.00 mass 0.63
+PROGRESS 73 64K code-next sh64x@0.01: 1.00 mass 0.49
+PROGRESS 74 64K code-next sh64x@0.005: 1.00 mass 0.41
+PROGRESS 76 64K code-next full@all: 1.00
+PROGRESS 77 64K code-next oracle@0.01: 1.00 mass 0.65
+PROGRESS 79 64K code-next sh64x@0.01: 0.37 mass 0.51
+PROGRESS 80 64K code-next sh64x@0.005: 0.37 mass 0.43
+PROGRESS 82 64K code-next full@all: 1.00
+PROGRESS 83 64K code-next oracle@0.01: 1.00 mass 0.62
+PROGRESS 85 64K code-next sh64x@0.01: 1.00 mass 0.47
+PROGRESS 86 64K code-next sh64x@0.005: 1.00 mass 0.39
+PROGRESS 88 64K code-next full@all: 0.16
+PROGRESS 89 64K code-next oracle@0.01: 0.97 mass 0.64
+PROGRESS 91 64K code-next sh64x@0.01: 0.16 mass 0.49
+PROGRESS 92 64K code-next sh64x@0.005: 0.16 mass 0.39
+PROGRESS 94 64K code-next full@all: 1.00
+PROGRESS 95 64K code-next oracle@0.01: 1.00 mass 0.66
+PROGRESS 97 64K code-next sh64x@0.01: 1.00 mass 0.52
+PROGRESS 99 64K code-next sh64x@0.005: 1.00 mass 0.43
+RESULT 64K {"needle": {"full@all": {"score": 1.0, "mass": null, "ws": null}, "oracle@0.01": {"score": 1.0, "mass": 0.634, "ws": 0.263}, "sh64x@0.01": {"score": 1.0, "mass": 0.516, "ws": 0.104}, "sh64x@0.005": {"score": 1.0, "mass": 0.434, "ws": 0.058}}, "essay-complete": {"full@all": {"score": 1.0, "mass": null, "ws": null}, "oracle@0.01": {"score": 1.0, "mass": 0.613, "ws": 0.283}, "sh64x@0.01": {"score": 1.0, "mass": 0.478, "ws": 0.115}, "sh64x@0.005": {"score": 1.0, "mass": 0.391, "ws": 0.063}}, "code-next": {"full@all": {"score": 0.896, "mass": null, "ws": null}, "oracle@0.01": {"score": 0.996, "mass": 0.645, "ws": 0.266}, "sh64x@0.01": {"score": 0.817, "mass": 0.504, "ws": 0.105}, "sh64x@0.005": {"score": 0.817, "mass": 0.418, "ws": 0.058}}}
+PHASE 128K
+PROGRESS 1 128K: prefilling 128000 tokens
+PREFILL 128000 tok in 145s, mem 21.59 GiB, peak 22.70 GiB
+PROGRESS 3 128K needle full@all: 1.00
+PROGRESS 5 128K needle oracle@0.01: 1.00 mass 0.63
+PROGRESS 6 128K needle sh64x@0.01: 1.00 mass 0.52
+PROGRESS 8 128K needle sh64x@0.005: 1.00 mass 0.44
+PROGRESS 9 128K needle full@all: 1.00
+PROGRESS 11 128K needle oracle@0.01: 1.00 mass 0.62
+PROGRESS 12 128K needle sh64x@0.01: 1.00 mass 0.50
+PROGRESS 14 128K needle sh64x@0.005: 1.00 mass 0.43
+PROGRESS 15 128K essay-complete full@all: 1.00
+PROGRESS 17 128K essay-complete oracle@0.01: 1.00 mass 0.61
+PROGRESS 18 128K essay-complete sh64x@0.01: 1.00 mass 0.47
+PROGRESS 20 128K essay-complete sh64x@0.005: 1.00 mass 0.39
+PROGRESS 21 128K essay-complete full@all: 1.00
+PROGRESS 23 128K essay-complete oracle@0.01: 1.00 mass 0.59
+PROGRESS 24 128K essay-complete sh64x@0.01: 1.00 mass 0.44
+PROGRESS 26 128K essay-complete sh64x@0.005: 1.00 mass 0.34
+PROGRESS 27 128K essay-complete full@all: 1.00
+PROGRESS 29 128K essay-complete oracle@0.01: 1.00 mass 0.59
+PROGRESS 30 128K essay-complete sh64x@0.01: 1.00 mass 0.45
+PROGRESS 32 128K essay-complete sh64x@0.005: 0.19 mass 0.32
+PROGRESS 33 128K essay-complete full@all: 1.00
+PROGRESS 35 128K essay-complete oracle@0.01: 1.00 mass 0.58
+PROGRESS 36 128K essay-complete sh64x@0.01: 1.00 mass 0.43
+PROGRESS 38 128K essay-complete sh64x@0.005: 1.00 mass 0.34
+PROGRESS 39 128K essay-complete full@all: 1.00
+PROGRESS 41 128K essay-complete oracle@0.01: 1.00 mass 0.63
+PROGRESS 42 128K essay-complete sh64x@0.01: 1.00 mass 0.50
+PROGRESS 44 128K essay-complete sh64x@0.005: 1.00 mass 0.42
+PROGRESS 45 128K essay-complete full@all: 1.00
+PROGRESS 47 128K essay-complete oracle@0.01: 1.00 mass 0.65
+PROGRESS 48 128K essay-complete sh64x@0.01: 1.00 mass 0.52
+PROGRESS 50 128K essay-complete sh64x@0.005: 1.00 mass 0.43
+PROGRESS 1 128K: prefilling 128000 tokens
+PREFILL 128000 tok in 144s, mem 21.59 GiB, peak 22.96 GiB
+PROGRESS 52 128K code-next full@all: 0.73
+PROGRESS 53 128K code-next oracle@0.01: 0.73 mass 0.66
+PROGRESS 55 128K code-next sh64x@0.01: 0.73 mass 0.54
+PROGRESS 56 128K code-next sh64x@0.005: 0.73 mass 0.46
+PROGRESS 58 128K code-next full@all: 1.00
+PROGRESS 59 128K code-next oracle@0.01: 1.00 mass 0.65
+PROGRESS 61 128K code-next sh64x@0.01: 1.00 mass 0.53
+PROGRESS 62 128K code-next sh64x@0.005: 1.00 mass 0.44
+PROGRESS 64 128K code-next full@all: 1.00
+PROGRESS 65 128K code-next oracle@0.01: 1.00 mass 0.64
+PROGRESS 67 128K code-next sh64x@0.01: 1.00 mass 0.51
+PROGRESS 68 128K code-next sh64x@0.005: 1.00 mass 0.42
+PROGRESS 70 128K code-next full@all: 1.00
+PROGRESS 71 128K code-next oracle@0.01: 1.00 mass 0.64
+PROGRESS 73 128K code-next sh64x@0.01: 1.00 mass 0.49
+PROGRESS 74 128K code-next sh64x@0.005: 1.00 mass 0.40
+PROGRESS 76 128K code-next full@all: 1.00
+PROGRESS 77 128K code-next oracle@0.01: 1.00 mass 0.64
+PROGRESS 79 128K code-next sh64x@0.01: 1.00 mass 0.50
+PROGRESS 80 128K code-next sh64x@0.005: 1.00 mass 0.41
+PROGRESS 82 128K code-next full@all: 1.00
+PROGRESS 83 128K code-next oracle@0.01: 1.00 mass 0.64
+PROGRESS 85 128K code-next sh64x@0.01: 1.00 mass 0.51
+PROGRESS 86 128K code-next sh64x@0.005: 1.00 mass 0.42
+PROGRESS 88 128K code-next full@all: 1.00
+PROGRESS 89 128K code-next oracle@0.01: 1.00 mass 0.67
+PROGRESS 91 128K code-next sh64x@0.01: 1.00 mass 0.52
+PROGRESS 92 128K code-next sh64x@0.005: 1.00 mass 0.44
+PROGRESS 94 128K code-next full@all: 1.00
+PROGRESS 95 128K code-next oracle@0.01: 1.00 mass 0.67
+PROGRESS 97 128K code-next sh64x@0.01: 1.00 mass 0.54
+PROGRESS 99 128K code-next sh64x@0.005: 1.00 mass 0.45
+RESULT 128K {"needle": {"full@all": {"score": 1.0, "mass": null, "ws": null}, "oracle@0.01": {"score": 1.0, "mass": 0.627, "ws": 0.258}, "sh64x@0.01": {"score": 1.0, "mass": 0.513, "ws": 0.102}, "sh64x@0.005": {"score": 1.0, "mass": 0.435, "ws": 0.057}}, "essay-complete": {"full@all": {"score": 1.0, "mass": null, "ws": null}, "oracle@0.01": {"score": 1.0, "mass": 0.609, "ws": 0.281}, "sh64x@0.01": {"score": 1.0, "mass": 0.467, "ws": 0.115}, "sh64x@0.005": {"score": 0.865, "mass": 0.371, "ws": 0.065}}, "code-next": {"full@all": {"score": 0.966, "mass": null, "ws": null}, "oracle@0.01": {"score": 0.966, "mass": 0.653, "ws": 0.292}, "sh64x@0.01": {"score": 0.966, "mass": 0.518, "ws": 0.119}, "sh64x@0.005": {"score": 0.966, "mass": 0.431, "ws": 0.068}}}
+ALLDONE

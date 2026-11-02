@@ -1,0 +1,29 @@
+=== HYBRID fa2
+[tokengate] downloading checkpoint from hf.co/liana313/tokengate-niah-qwen3.5-2b ...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 3098.86it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 10324.92it/s]
+[gate] loaded LoRA $HF_HOME/hub/models--liana313--tokengate-niah-qwen3.5-2b/snapshots/b1fe3e72b9896efc821fbfa02a19fcded4de6d77/lora_step18000.pt (rank=16, alpha=32.0, targets=['self_attn.q_proj', 'self_attn.v_proj'], layers=3..23)
+[FlexAttention] patched 6 full-attention layers: [3, 7, 11, 15, 19, 23]
+[gate] attention kernels: fa2 -> causal/bias = ('flash', 'fa2-bias')
+[FlexAttention] Warming up compilation...
+[FlexAttention] Warmup complete
+[gate] scoring branch (mlp): 25.17M params, fp32 storage, compute in the backbone dtype (3 CastLinears' bf16 copies frozen)
+[gate] ready (layer=1, d_model=2048)
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+
+[niah] 5 haystacks of ~32k tokens, one needle each (depths 44%, 44%, 11%, 78%, 100%)
+
+ kept tokens    acc   TTFT(ms)  speedup  needle kept
+------------------------------------------------------
+         all   0.80     2025.6    1.00x        100%
+        2000   0.80     2066.8    0.98x         69%
+         500   0.80      195.7   10.35x         65%
+         100   0.20      194.6   10.41x         40%
+
+[needle @ K=100] What is the best thing to do in San Francisco?
+  model:  eat a sandwich at the fishermen's quay, the sky is bright, and the ginkgo leaves
+  gold :  eat a sandwich and sit in Dolores Park on a sunny day
+  (147 of 32155 prompt tokens kept in the KV cache)
+SMOKE-EXIT 0
